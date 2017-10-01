@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 import api from '../../utilities/api';
+import AlbumDetail from './../albumDetail';
 
 class AlbumList extends React.Component {
   state = {
@@ -18,11 +19,12 @@ class AlbumList extends React.Component {
 
   renderAlbums() {
     const { albums } = this.state;
-    return albums.map((album, index) => <Text key={index}>{album.title}</Text>);
+    return albums.map((album, index) => (
+      <AlbumDetail key={index} album={album} />
+    ));
   }
 
   render() {
-    console.log(this.state.albums);
     return <View>{this.renderAlbums()}</View>;
   }
 }

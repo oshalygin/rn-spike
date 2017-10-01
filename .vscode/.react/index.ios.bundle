@@ -58197,6 +58197,10 @@ var _api = require(473                  ); // 473 = ../../utilities/api
 
 var _api2 = _interopRequireDefault(_api);
 
+var _albumDetail = require(500               ); // 500 = ./../albumDetail
+
+var _albumDetail2 = _interopRequireDefault(_albumDetail);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -58260,27 +58264,22 @@ var AlbumList = _wrapComponent('AlbumList')(function (_React$Component) {
       var albums = this.state.albums;
 
       return albums.map(function (album, index) {
-        return _react3.default.createElement(
-          _reactNative.Text,
-          { key: index, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 21
-            }
-          },
-          album.title
-        );
+        return _react3.default.createElement(_albumDetail2.default, { key: index, album: album, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23
+          }
+        });
       });
     }
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.state.albums);
       return _react3.default.createElement(
         _reactNative.View,
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 28
           }
         },
         this.renderAlbums()
@@ -59295,6 +59294,211 @@ module.exports = function spread(callback) {
   };
 };
 }, 499, null, "axios/lib/helpers/spread.js");
+__d(/* albums/src/components/albumDetail/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/oshalygin/dev/react-native/albums/src/components/albumDetail/index.js';
+
+var _react = require(12     ); // 12 = react
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require(127         ); // 127 = prop-types
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactNative = require(22            ); // 22 = react-native
+
+var _Card = require(501             ); // 501 = ../common/Card
+
+var _Card2 = _interopRequireDefault(_Card);
+
+var _CardSection = require(502                    ); // 502 = ../common/CardSection
+
+var _CardSection2 = _interopRequireDefault(_CardSection);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var propTypes = {
+  album: _propTypes2.default.shape({
+    title: _propTypes2.default.string.isRequired,
+    artist: _propTypes2.default.string.isRequired,
+    url: _propTypes2.default.string.isRequired,
+    image: _propTypes2.default.string.isRequired,
+    thumbnail_image: _propTypes2.default.string.isRequired })
+};
+
+var AlbumDetail = function AlbumDetail(_ref) {
+  var album = _ref.album;
+
+  return _react2.default.createElement(
+    _Card2.default,
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      }
+    },
+    _react2.default.createElement(
+      _CardSection2.default,
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        }
+      },
+      _react2.default.createElement(
+        _reactNative.Text,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21
+          }
+        },
+        album.title
+      )
+    ),
+    _react2.default.createElement(
+      _CardSection2.default,
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        }
+      },
+      _react2.default.createElement(
+        _reactNative.Text,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25
+          }
+        },
+        album.title
+      )
+    )
+  );
+};
+
+AlbumDetail.propTypes = propTypes;
+
+exports.default = AlbumDetail;
+}, 500, null, "albums/src/components/albumDetail/index.js");
+__d(/* albums/src/components/common/Card.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/oshalygin/dev/react-native/albums/src/components/common/Card.js';
+
+var _react = require(12     ); // 12 = react
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require(127         ); // 127 = prop-types
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactNative = require(22            ); // 22 = react-native
+
+var _colors = require(317                     ); // 317 = ../../styles/colors.js
+
+var _colors2 = _interopRequireDefault(_colors);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var propTypes = {
+  children: _propTypes2.default.node
+};
+
+var styles = {
+  containerStyle: {
+    borderWidth: 1,
+    borderRadius: 2,
+    borderColor: _colors2.default.neutral.ash,
+    borderBottomWidth: 0,
+    shadowColor: _colors2.default.neutral.black,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 5,
+    marginRight: 5,
+    marginTop: 10
+  }
+};
+
+var Card = function Card(_ref) {
+  var children = _ref.children;
+
+  return _react2.default.createElement(
+    _reactNative.View,
+    { style: styles.containerStyle, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      }
+    },
+    children
+  );
+};
+
+Card.propTypes = propTypes;
+
+exports.default = Card;
+}, 501, null, "albums/src/components/common/Card.js");
+__d(/* albums/src/components/common/CardSection.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/oshalygin/dev/react-native/albums/src/components/common/CardSection.js';
+
+var _react = require(12     ); // 12 = react
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require(127         ); // 127 = prop-types
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactNative = require(22            ); // 22 = react-native
+
+var _colors = require(317                     ); // 317 = ../../styles/colors.js
+
+var _colors2 = _interopRequireDefault(_colors);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var propTypes = {
+  children: _propTypes2.default.node
+};
+
+var styles = {
+  containerStyle: {
+    borderBottomWidth: 1,
+    padding: 5,
+    backgroundColor: _colors2.default.neutral.white,
+    borderColor: _colors2.default.neutral.ash,
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    position: 'relative'
+  }
+};
+
+var CardSection = function CardSection(_ref) {
+  var children = _ref.children;
+
+  return _react2.default.createElement(
+    _reactNative.View,
+    { style: styles.containerStyle, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      }
+    },
+    children
+  );
+};
+
+CardSection.propTypes = propTypes;
+
+exports.default = CardSection;
+}, 502, null, "albums/src/components/common/CardSection.js");
 ;require(68);
 ;require(0);
 //# sourceMappingURL=index.ios.map
