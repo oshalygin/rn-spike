@@ -1,25 +1,29 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+
 import api from '../../utilities/api';
 
 class AlbumList extends React.Component {
-  componentWillMount() {
-    async function foobar() {
-      const result = await api.get(
-        'https://rallycoding.herokuapp.com/api/music_albums',
-      );
-      console.log(result.data);
-    }
+  state = {
+    albums: [],
+  };
 
-    foobar();
+  componentWillMount() {
+    api
+      .get('https://rallycoding.herokuapp.com/api/music_albums')
+      .then(({ data }) => {
+        this.setState({ albums: data });
+      });
+  }
+
+  renderAlbums() {
+    const { albums } = this.state;
+    return albums.map((album, index) => <Text key={index}>{album.title}</Text>);
   }
 
   render() {
-    return (
-      <View>
-        <Text>Album List</Text>
-      </View>
-    );
+    console.log(this.state.albums);
+    return <View>{this.renderAlbums()}</View>;
   }
 }
 
