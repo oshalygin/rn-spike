@@ -14,7 +14,7 @@
       "outDir": "${workspaceRoot}/.vscode/.react"
     },
     {
-      "name": "Debug iOS",
+    "name": "Debug iOS",
       "program": "${workspaceRoot}/.vscode/launchReactNative.js",
       "type": "reactnative",
       "request": "launch",
