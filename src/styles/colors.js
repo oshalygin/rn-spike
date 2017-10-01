@@ -1,5 +1,3 @@
-/* TODO [ATOM-377] */
-
 export default {
   brand: {
     red: '#ED3620',
