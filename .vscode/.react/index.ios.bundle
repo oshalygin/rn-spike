@@ -1259,30 +1259,35 @@ var _Header = require(316                             ); // 316 = ./src/componen
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _albums = require(318                      ); // 318 = ./src/components/albums
+var _Albums = require(576                                ); // 576 = ./src/components/albums/Albums.js
 
-var _albums2 = _interopRequireDefault(_albums);
+var _Albums2 = _interopRequireDefault(_Albums);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var styles = {
+  root: {
+    flex: 1
+  }
+};
 
 var Application = function Application() {
   return _react2.default.createElement(
     _reactNative.View,
-    {
-      __source: {
+    { style: styles.root, __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 15
       }
     },
     _react2.default.createElement(_Header2.default, { text: 'Albums', __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 16
       }
     }),
-    _react2.default.createElement(_albums2.default, {
+    _react2.default.createElement(_Albums2.default, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 17
       }
     })
   );
@@ -25402,7 +25407,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -25519,9 +25524,9 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { 'default': obj };
 }
 
-var _reactProxy = require(320          ); // 320 = react-proxy
+var _reactProxy = require(422          ); // 422 = react-proxy
 
-var _globalWindow = require(472            ); // 472 = global/window
+var _globalWindow = require(574            ); // 574 = global/window
 
 var _globalWindow2 = _interopRequireDefault(_globalWindow);
 
@@ -25602,7 +25607,7 @@ function proxyReactComponents(_ref) {
 }
 
 module.exports = exports['default'];
-}, 319, null, "react-transform-hmr/lib/index.js");
+}, 421, null, "react-transform-hmr/lib/index.js");
 __d(/* react-proxy/modules/index.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25610,15 +25615,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getForceUpdate = exports.createProxy = undefined;
 
-var _supportsProtoAssignment = require(321                        ); // 321 = ./supportsProtoAssignment
+var _supportsProtoAssignment = require(423                        ); // 423 = ./supportsProtoAssignment
 
 var _supportsProtoAssignment2 = _interopRequireDefault(_supportsProtoAssignment);
 
-var _createClassProxy = require(322                 ); // 322 = ./createClassProxy
+var _createClassProxy = require(424                 ); // 424 = ./createClassProxy
 
 var _createClassProxy2 = _interopRequireDefault(_createClassProxy);
 
-var _reactDeepForceUpdate = require(471                      ); // 471 = react-deep-force-update
+var _reactDeepForceUpdate = require(573                      ); // 573 = react-deep-force-update
 
 var _reactDeepForceUpdate2 = _interopRequireDefault(_reactDeepForceUpdate);
 
@@ -25632,7 +25637,7 @@ if (!(0, _supportsProtoAssignment2.default)()) {
 
 exports.createProxy = _createClassProxy2.default;
 exports.getForceUpdate = _reactDeepForceUpdate2.default;
-}, 320, null, "react-proxy/modules/index.js");
+}, 422, null, "react-proxy/modules/index.js");
 __d(/* react-proxy/modules/supportsProtoAssignment.js */function(global, require, module, exports) {"use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25648,7 +25653,7 @@ try {
 function supportsProtoAssignment() {
   return x.supports || false;
 };
-}, 321, null, "react-proxy/modules/supportsProtoAssignment.js");
+}, 423, null, "react-proxy/modules/supportsProtoAssignment.js");
 __d(/* react-proxy/modules/createClassProxy.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25694,23 +25699,23 @@ var _slicedToArray = function () {
 exports.default = proxyClass;
 exports.default = createClassProxy;
 
-var _find = require(323          ); // 323 = lodash/find
+var _find = require(425          ); // 425 = lodash/find
 
 var _find2 = _interopRequireDefault(_find);
 
-var _createPrototypeProxy = require(444                     ); // 444 = ./createPrototypeProxy
+var _createPrototypeProxy = require(546                     ); // 546 = ./createPrototypeProxy
 
 var _createPrototypeProxy2 = _interopRequireDefault(_createPrototypeProxy);
 
-var _bindAutoBindMethods = require(469                    ); // 469 = ./bindAutoBindMethods
+var _bindAutoBindMethods = require(571                    ); // 571 = ./bindAutoBindMethods
 
 var _bindAutoBindMethods2 = _interopRequireDefault(_bindAutoBindMethods);
 
-var _deleteUnknownAutoBindMethods = require(470                             ); // 470 = ./deleteUnknownAutoBindMethods
+var _deleteUnknownAutoBindMethods = require(572                             ); // 572 = ./deleteUnknownAutoBindMethods
 
 var _deleteUnknownAutoBindMethods2 = _interopRequireDefault(_deleteUnknownAutoBindMethods);
 
-var _supportsProtoAssignment = require(321                        ); // 321 = ./supportsProtoAssignment
+var _supportsProtoAssignment = require(423                        ); // 423 = ./supportsProtoAssignment
 
 var _supportsProtoAssignment2 = _interopRequireDefault(_supportsProtoAssignment);
 
@@ -25912,17 +25917,17 @@ function createFallback(Component) {
 function createClassProxy(Component) {
   return Component.__proto__ && (0, _supportsProtoAssignment2.default)() ? proxyClass(Component) : createFallback(Component);
 }
-}, 322, null, "react-proxy/modules/createClassProxy.js");
-__d(/* lodash/find.js */function(global, require, module, exports) {var createFind = require(324            ), // 324 = ./_createFind
-    findIndex = require(439          ); // 439 = ./findIndex
+}, 424, null, "react-proxy/modules/createClassProxy.js");
+__d(/* lodash/find.js */function(global, require, module, exports) {var createFind = require(426            ), // 426 = ./_createFind
+    findIndex = require(541          ); // 541 = ./findIndex
 
 var find = createFind(findIndex);
 
 module.exports = find;
-}, 323, null, "lodash/find.js");
-__d(/* lodash/_createFind.js */function(global, require, module, exports) {var baseIteratee = require(325              ), // 325 = ./_baseIteratee
-    isArrayLike = require(410            ), // 410 = ./isArrayLike
-    keys = require(392     ); // 392 = ./keys
+}, 425, null, "lodash/find.js");
+__d(/* lodash/_createFind.js */function(global, require, module, exports) {var baseIteratee = require(427              ), // 427 = ./_baseIteratee
+    isArrayLike = require(512            ), // 512 = ./isArrayLike
+    keys = require(494     ); // 494 = ./keys
 
 function createFind(findIndexFunc) {
   return function (collection, predicate, fromIndex) {
@@ -25940,12 +25945,12 @@ function createFind(findIndexFunc) {
 }
 
 module.exports = createFind;
-}, 324, null, "lodash/_createFind.js");
-__d(/* lodash/_baseIteratee.js */function(global, require, module, exports) {var baseMatches = require(326             ), // 326 = ./_baseMatches
-    baseMatchesProperty = require(419                     ), // 419 = ./_baseMatchesProperty
-    identity = require(435         ), // 435 = ./identity
-    isArray = require(388        ), // 388 = ./isArray
-    property = require(436         ); // 436 = ./property
+}, 426, null, "lodash/_createFind.js");
+__d(/* lodash/_baseIteratee.js */function(global, require, module, exports) {var baseMatches = require(428             ), // 428 = ./_baseMatches
+    baseMatchesProperty = require(521                     ), // 521 = ./_baseMatchesProperty
+    identity = require(537         ), // 537 = ./identity
+    isArray = require(490        ), // 490 = ./isArray
+    property = require(538         ); // 538 = ./property
 
 function baseIteratee(value) {
   if (typeof value == 'function') {
@@ -25961,10 +25966,10 @@ function baseIteratee(value) {
 }
 
 module.exports = baseIteratee;
-}, 325, null, "lodash/_baseIteratee.js");
-__d(/* lodash/_baseMatches.js */function(global, require, module, exports) {var baseIsMatch = require(327             ), // 327 = ./_baseIsMatch
-    getMatchData = require(416              ), // 416 = ./_getMatchData
-    matchesStrictComparable = require(418                         ); // 418 = ./_matchesStrictComparable
+}, 427, null, "lodash/_baseIteratee.js");
+__d(/* lodash/_baseMatches.js */function(global, require, module, exports) {var baseIsMatch = require(429             ), // 429 = ./_baseIsMatch
+    getMatchData = require(518              ), // 518 = ./_getMatchData
+    matchesStrictComparable = require(520                         ); // 520 = ./_matchesStrictComparable
 
 function baseMatches(source) {
   var matchData = getMatchData(source);
@@ -25977,9 +25982,9 @@ function baseMatches(source) {
 }
 
 module.exports = baseMatches;
-}, 326, null, "lodash/_baseMatches.js");
-__d(/* lodash/_baseIsMatch.js */function(global, require, module, exports) {var Stack = require(328       ), // 328 = ./_Stack
-    baseIsEqual = require(372             ); // 372 = ./_baseIsEqual
+}, 428, null, "lodash/_baseMatches.js");
+__d(/* lodash/_baseIsMatch.js */function(global, require, module, exports) {var Stack = require(430       ), // 430 = ./_Stack
+    baseIsEqual = require(474             ); // 474 = ./_baseIsEqual
 
 var COMPARE_PARTIAL_FLAG = 1,
     COMPARE_UNORDERED_FLAG = 2;
@@ -26023,13 +26028,13 @@ function baseIsMatch(object, source, matchData, customizer) {
 }
 
 module.exports = baseIsMatch;
-}, 327, null, "lodash/_baseIsMatch.js");
-__d(/* lodash/_Stack.js */function(global, require, module, exports) {var ListCache = require(329           ), // 329 = ./_ListCache
-    stackClear = require(337            ), // 337 = ./_stackClear
-    stackDelete = require(338             ), // 338 = ./_stackDelete
-    stackGet = require(339          ), // 339 = ./_stackGet
-    stackHas = require(340          ), // 340 = ./_stackHas
-    stackSet = require(341          ); // 341 = ./_stackSet
+}, 429, null, "lodash/_baseIsMatch.js");
+__d(/* lodash/_Stack.js */function(global, require, module, exports) {var ListCache = require(431           ), // 431 = ./_ListCache
+    stackClear = require(439            ), // 439 = ./_stackClear
+    stackDelete = require(440             ), // 440 = ./_stackDelete
+    stackGet = require(441          ), // 441 = ./_stackGet
+    stackHas = require(442          ), // 442 = ./_stackHas
+    stackSet = require(443          ); // 443 = ./_stackSet
 
 function Stack(entries) {
   var data = this.__data__ = new ListCache(entries);
@@ -26043,12 +26048,12 @@ Stack.prototype.has = stackHas;
 Stack.prototype.set = stackSet;
 
 module.exports = Stack;
-}, 328, null, "lodash/_Stack.js");
-__d(/* lodash/_ListCache.js */function(global, require, module, exports) {var listCacheClear = require(330                ), // 330 = ./_listCacheClear
-    listCacheDelete = require(331                 ), // 331 = ./_listCacheDelete
-    listCacheGet = require(334              ), // 334 = ./_listCacheGet
-    listCacheHas = require(335              ), // 335 = ./_listCacheHas
-    listCacheSet = require(336              ); // 336 = ./_listCacheSet
+}, 430, null, "lodash/_Stack.js");
+__d(/* lodash/_ListCache.js */function(global, require, module, exports) {var listCacheClear = require(432                ), // 432 = ./_listCacheClear
+    listCacheDelete = require(433                 ), // 433 = ./_listCacheDelete
+    listCacheGet = require(436              ), // 436 = ./_listCacheGet
+    listCacheHas = require(437              ), // 437 = ./_listCacheHas
+    listCacheSet = require(438              ); // 438 = ./_listCacheSet
 
 function ListCache(entries) {
     var index = -1,
@@ -26068,7 +26073,7 @@ ListCache.prototype.has = listCacheHas;
 ListCache.prototype.set = listCacheSet;
 
 module.exports = ListCache;
-}, 329, null, "lodash/_ListCache.js");
+}, 431, null, "lodash/_ListCache.js");
 __d(/* lodash/_listCacheClear.js */function(global, require, module, exports) {
 function listCacheClear() {
   this.__data__ = [];
@@ -26076,8 +26081,8 @@ function listCacheClear() {
 }
 
 module.exports = listCacheClear;
-}, 330, null, "lodash/_listCacheClear.js");
-__d(/* lodash/_listCacheDelete.js */function(global, require, module, exports) {var assocIndexOf = require(332              ); // 332 = ./_assocIndexOf
+}, 432, null, "lodash/_listCacheClear.js");
+__d(/* lodash/_listCacheDelete.js */function(global, require, module, exports) {var assocIndexOf = require(434              ); // 434 = ./_assocIndexOf
 
 var arrayProto = Array.prototype;
 
@@ -26101,8 +26106,8 @@ function listCacheDelete(key) {
 }
 
 module.exports = listCacheDelete;
-}, 331, null, "lodash/_listCacheDelete.js");
-__d(/* lodash/_assocIndexOf.js */function(global, require, module, exports) {var eq = require(333   ); // 333 = ./eq
+}, 433, null, "lodash/_listCacheDelete.js");
+__d(/* lodash/_assocIndexOf.js */function(global, require, module, exports) {var eq = require(435   ); // 435 = ./eq
 
 function assocIndexOf(array, key) {
   var length = array.length;
@@ -26115,15 +26120,15 @@ function assocIndexOf(array, key) {
 }
 
 module.exports = assocIndexOf;
-}, 332, null, "lodash/_assocIndexOf.js");
+}, 434, null, "lodash/_assocIndexOf.js");
 __d(/* lodash/eq.js */function(global, require, module, exports) {
 function eq(value, other) {
   return value === other || value !== value && other !== other;
 }
 
 module.exports = eq;
-}, 333, null, "lodash/eq.js");
-__d(/* lodash/_listCacheGet.js */function(global, require, module, exports) {var assocIndexOf = require(332              ); // 332 = ./_assocIndexOf
+}, 435, null, "lodash/eq.js");
+__d(/* lodash/_listCacheGet.js */function(global, require, module, exports) {var assocIndexOf = require(434              ); // 434 = ./_assocIndexOf
 
 function listCacheGet(key) {
   var data = this.__data__,
@@ -26133,16 +26138,16 @@ function listCacheGet(key) {
 }
 
 module.exports = listCacheGet;
-}, 334, null, "lodash/_listCacheGet.js");
-__d(/* lodash/_listCacheHas.js */function(global, require, module, exports) {var assocIndexOf = require(332              ); // 332 = ./_assocIndexOf
+}, 436, null, "lodash/_listCacheGet.js");
+__d(/* lodash/_listCacheHas.js */function(global, require, module, exports) {var assocIndexOf = require(434              ); // 434 = ./_assocIndexOf
 
 function listCacheHas(key) {
   return assocIndexOf(this.__data__, key) > -1;
 }
 
 module.exports = listCacheHas;
-}, 335, null, "lodash/_listCacheHas.js");
-__d(/* lodash/_listCacheSet.js */function(global, require, module, exports) {var assocIndexOf = require(332              ); // 332 = ./_assocIndexOf
+}, 437, null, "lodash/_listCacheHas.js");
+__d(/* lodash/_listCacheSet.js */function(global, require, module, exports) {var assocIndexOf = require(434              ); // 434 = ./_assocIndexOf
 
 function listCacheSet(key, value) {
   var data = this.__data__,
@@ -26158,8 +26163,8 @@ function listCacheSet(key, value) {
 }
 
 module.exports = listCacheSet;
-}, 336, null, "lodash/_listCacheSet.js");
-__d(/* lodash/_stackClear.js */function(global, require, module, exports) {var ListCache = require(329           ); // 329 = ./_ListCache
+}, 438, null, "lodash/_listCacheSet.js");
+__d(/* lodash/_stackClear.js */function(global, require, module, exports) {var ListCache = require(431           ); // 431 = ./_ListCache
 
 function stackClear() {
   this.__data__ = new ListCache();
@@ -26167,7 +26172,7 @@ function stackClear() {
 }
 
 module.exports = stackClear;
-}, 337, null, "lodash/_stackClear.js");
+}, 439, null, "lodash/_stackClear.js");
 __d(/* lodash/_stackDelete.js */function(global, require, module, exports) {
 function stackDelete(key) {
   var data = this.__data__,
@@ -26178,24 +26183,24 @@ function stackDelete(key) {
 }
 
 module.exports = stackDelete;
-}, 338, null, "lodash/_stackDelete.js");
+}, 440, null, "lodash/_stackDelete.js");
 __d(/* lodash/_stackGet.js */function(global, require, module, exports) {
 function stackGet(key) {
   return this.__data__.get(key);
 }
 
 module.exports = stackGet;
-}, 339, null, "lodash/_stackGet.js");
+}, 441, null, "lodash/_stackGet.js");
 __d(/* lodash/_stackHas.js */function(global, require, module, exports) {
 function stackHas(key) {
   return this.__data__.has(key);
 }
 
 module.exports = stackHas;
-}, 340, null, "lodash/_stackHas.js");
-__d(/* lodash/_stackSet.js */function(global, require, module, exports) {var ListCache = require(329           ), // 329 = ./_ListCache
-    Map = require(342     ), // 342 = ./_Map
-    MapCache = require(357          ); // 357 = ./_MapCache
+}, 442, null, "lodash/_stackHas.js");
+__d(/* lodash/_stackSet.js */function(global, require, module, exports) {var ListCache = require(431           ), // 431 = ./_ListCache
+    Map = require(444     ), // 444 = ./_Map
+    MapCache = require(459          ); // 459 = ./_MapCache
 
 var LARGE_ARRAY_SIZE = 200;
 
@@ -26216,16 +26221,16 @@ function stackSet(key, value) {
 }
 
 module.exports = stackSet;
-}, 341, null, "lodash/_stackSet.js");
-__d(/* lodash/_Map.js */function(global, require, module, exports) {var getNative = require(343           ), // 343 = ./_getNative
-    root = require(348      ); // 348 = ./_root
+}, 443, null, "lodash/_stackSet.js");
+__d(/* lodash/_Map.js */function(global, require, module, exports) {var getNative = require(445           ), // 445 = ./_getNative
+    root = require(450      ); // 450 = ./_root
 
 var Map = getNative(root, 'Map');
 
 module.exports = Map;
-}, 342, null, "lodash/_Map.js");
-__d(/* lodash/_getNative.js */function(global, require, module, exports) {var baseIsNative = require(344              ), // 344 = ./_baseIsNative
-    getValue = require(356          ); // 356 = ./_getValue
+}, 444, null, "lodash/_Map.js");
+__d(/* lodash/_getNative.js */function(global, require, module, exports) {var baseIsNative = require(446              ), // 446 = ./_baseIsNative
+    getValue = require(458          ); // 458 = ./_getValue
 
 function getNative(object, key) {
   var value = getValue(object, key);
@@ -26233,11 +26238,11 @@ function getNative(object, key) {
 }
 
 module.exports = getNative;
-}, 343, null, "lodash/_getNative.js");
-__d(/* lodash/_baseIsNative.js */function(global, require, module, exports) {var isFunction = require(345           ), // 345 = ./isFunction
-    isMasked = require(353          ), // 353 = ./_isMasked
-    isObject = require(352         ), // 352 = ./isObject
-    toSource = require(355          ); // 355 = ./_toSource
+}, 445, null, "lodash/_getNative.js");
+__d(/* lodash/_baseIsNative.js */function(global, require, module, exports) {var isFunction = require(447           ), // 447 = ./isFunction
+    isMasked = require(455          ), // 455 = ./_isMasked
+    isObject = require(454         ), // 454 = ./isObject
+    toSource = require(457          ); // 457 = ./_toSource
 
 var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
 
@@ -26261,9 +26266,9 @@ function baseIsNative(value) {
 }
 
 module.exports = baseIsNative;
-}, 344, null, "lodash/_baseIsNative.js");
-__d(/* lodash/isFunction.js */function(global, require, module, exports) {var baseGetTag = require(346            ), // 346 = ./_baseGetTag
-    isObject = require(352         ); // 352 = ./isObject
+}, 446, null, "lodash/_baseIsNative.js");
+__d(/* lodash/isFunction.js */function(global, require, module, exports) {var baseGetTag = require(448            ), // 448 = ./_baseGetTag
+    isObject = require(454         ); // 454 = ./isObject
 
 var asyncTag = '[object AsyncFunction]',
     funcTag = '[object Function]',
@@ -26280,10 +26285,10 @@ function isFunction(value) {
 }
 
 module.exports = isFunction;
-}, 345, null, "lodash/isFunction.js");
-__d(/* lodash/_baseGetTag.js */function(global, require, module, exports) {var Symbol = require(347        ), // 347 = ./_Symbol
-    getRawTag = require(350           ), // 350 = ./_getRawTag
-    objectToString = require(351                ); // 351 = ./_objectToString
+}, 447, null, "lodash/isFunction.js");
+__d(/* lodash/_baseGetTag.js */function(global, require, module, exports) {var Symbol = require(449        ), // 449 = ./_Symbol
+    getRawTag = require(452           ), // 452 = ./_getRawTag
+    objectToString = require(453                ); // 453 = ./_objectToString
 
 var nullTag = '[object Null]',
     undefinedTag = '[object Undefined]';
@@ -26298,27 +26303,27 @@ function baseGetTag(value) {
 }
 
 module.exports = baseGetTag;
-}, 346, null, "lodash/_baseGetTag.js");
-__d(/* lodash/_Symbol.js */function(global, require, module, exports) {var root = require(348      ); // 348 = ./_root
+}, 448, null, "lodash/_baseGetTag.js");
+__d(/* lodash/_Symbol.js */function(global, require, module, exports) {var root = require(450      ); // 450 = ./_root
 
 var Symbol = root.Symbol;
 
 module.exports = Symbol;
-}, 347, null, "lodash/_Symbol.js");
-__d(/* lodash/_root.js */function(global, require, module, exports) {var freeGlobal = require(349            ); // 349 = ./_freeGlobal
+}, 449, null, "lodash/_Symbol.js");
+__d(/* lodash/_root.js */function(global, require, module, exports) {var freeGlobal = require(451            ); // 451 = ./_freeGlobal
 
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
 
 var root = freeGlobal || freeSelf || Function('return this')();
 
 module.exports = root;
-}, 348, null, "lodash/_root.js");
+}, 450, null, "lodash/_root.js");
 __d(/* lodash/_freeGlobal.js */function(global, require, module, exports) {
 var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
 
 module.exports = freeGlobal;
-}, 349, null, "lodash/_freeGlobal.js");
-__d(/* lodash/_getRawTag.js */function(global, require, module, exports) {var Symbol = require(347        ); // 347 = ./_Symbol
+}, 451, null, "lodash/_freeGlobal.js");
+__d(/* lodash/_getRawTag.js */function(global, require, module, exports) {var Symbol = require(449        ); // 449 = ./_Symbol
 
 var objectProto = Object.prototype;
 
@@ -26349,7 +26354,7 @@ function getRawTag(value) {
 }
 
 module.exports = getRawTag;
-}, 350, null, "lodash/_getRawTag.js");
+}, 452, null, "lodash/_getRawTag.js");
 __d(/* lodash/_objectToString.js */function(global, require, module, exports) {
 var objectProto = Object.prototype;
 
@@ -26360,7 +26365,7 @@ function objectToString(value) {
 }
 
 module.exports = objectToString;
-}, 351, null, "lodash/_objectToString.js");
+}, 453, null, "lodash/_objectToString.js");
 __d(/* lodash/isObject.js */function(global, require, module, exports) {
 function isObject(value) {
   var type = typeof value;
@@ -26368,8 +26373,8 @@ function isObject(value) {
 }
 
 module.exports = isObject;
-}, 352, null, "lodash/isObject.js");
-__d(/* lodash/_isMasked.js */function(global, require, module, exports) {var coreJsData = require(354            ); // 354 = ./_coreJsData
+}, 454, null, "lodash/isObject.js");
+__d(/* lodash/_isMasked.js */function(global, require, module, exports) {var coreJsData = require(456            ); // 456 = ./_coreJsData
 
 var maskSrcKey = function () {
   var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
@@ -26381,13 +26386,13 @@ function isMasked(func) {
 }
 
 module.exports = isMasked;
-}, 353, null, "lodash/_isMasked.js");
-__d(/* lodash/_coreJsData.js */function(global, require, module, exports) {var root = require(348      ); // 348 = ./_root
+}, 455, null, "lodash/_isMasked.js");
+__d(/* lodash/_coreJsData.js */function(global, require, module, exports) {var root = require(450      ); // 450 = ./_root
 
 var coreJsData = root['__core-js_shared__'];
 
 module.exports = coreJsData;
-}, 354, null, "lodash/_coreJsData.js");
+}, 456, null, "lodash/_coreJsData.js");
 __d(/* lodash/_toSource.js */function(global, require, module, exports) {
 var funcProto = Function.prototype;
 
@@ -26406,19 +26411,19 @@ function toSource(func) {
 }
 
 module.exports = toSource;
-}, 355, null, "lodash/_toSource.js");
+}, 457, null, "lodash/_toSource.js");
 __d(/* lodash/_getValue.js */function(global, require, module, exports) {
 function getValue(object, key) {
   return object == null ? undefined : object[key];
 }
 
 module.exports = getValue;
-}, 356, null, "lodash/_getValue.js");
-__d(/* lodash/_MapCache.js */function(global, require, module, exports) {var mapCacheClear = require(358               ), // 358 = ./_mapCacheClear
-    mapCacheDelete = require(366                ), // 366 = ./_mapCacheDelete
-    mapCacheGet = require(369             ), // 369 = ./_mapCacheGet
-    mapCacheHas = require(370             ), // 370 = ./_mapCacheHas
-    mapCacheSet = require(371             ); // 371 = ./_mapCacheSet
+}, 458, null, "lodash/_getValue.js");
+__d(/* lodash/_MapCache.js */function(global, require, module, exports) {var mapCacheClear = require(460               ), // 460 = ./_mapCacheClear
+    mapCacheDelete = require(468                ), // 468 = ./_mapCacheDelete
+    mapCacheGet = require(471             ), // 471 = ./_mapCacheGet
+    mapCacheHas = require(472             ), // 472 = ./_mapCacheHas
+    mapCacheSet = require(473             ); // 473 = ./_mapCacheSet
 
 function MapCache(entries) {
     var index = -1,
@@ -26438,10 +26443,10 @@ MapCache.prototype.has = mapCacheHas;
 MapCache.prototype.set = mapCacheSet;
 
 module.exports = MapCache;
-}, 357, null, "lodash/_MapCache.js");
-__d(/* lodash/_mapCacheClear.js */function(global, require, module, exports) {var Hash = require(359      ), // 359 = ./_Hash
-    ListCache = require(329           ), // 329 = ./_ListCache
-    Map = require(342     ); // 342 = ./_Map
+}, 459, null, "lodash/_MapCache.js");
+__d(/* lodash/_mapCacheClear.js */function(global, require, module, exports) {var Hash = require(461      ), // 461 = ./_Hash
+    ListCache = require(431           ), // 431 = ./_ListCache
+    Map = require(444     ); // 444 = ./_Map
 
 function mapCacheClear() {
   this.size = 0;
@@ -26453,12 +26458,12 @@ function mapCacheClear() {
 }
 
 module.exports = mapCacheClear;
-}, 358, null, "lodash/_mapCacheClear.js");
-__d(/* lodash/_Hash.js */function(global, require, module, exports) {var hashClear = require(360           ), // 360 = ./_hashClear
-    hashDelete = require(362            ), // 362 = ./_hashDelete
-    hashGet = require(363         ), // 363 = ./_hashGet
-    hashHas = require(364         ), // 364 = ./_hashHas
-    hashSet = require(365         ); // 365 = ./_hashSet
+}, 460, null, "lodash/_mapCacheClear.js");
+__d(/* lodash/_Hash.js */function(global, require, module, exports) {var hashClear = require(462           ), // 462 = ./_hashClear
+    hashDelete = require(464            ), // 464 = ./_hashDelete
+    hashGet = require(465         ), // 465 = ./_hashGet
+    hashHas = require(466         ), // 466 = ./_hashHas
+    hashSet = require(467         ); // 467 = ./_hashSet
 
 function Hash(entries) {
     var index = -1,
@@ -26478,8 +26483,8 @@ Hash.prototype.has = hashHas;
 Hash.prototype.set = hashSet;
 
 module.exports = Hash;
-}, 359, null, "lodash/_Hash.js");
-__d(/* lodash/_hashClear.js */function(global, require, module, exports) {var nativeCreate = require(361              ); // 361 = ./_nativeCreate
+}, 461, null, "lodash/_Hash.js");
+__d(/* lodash/_hashClear.js */function(global, require, module, exports) {var nativeCreate = require(463              ); // 463 = ./_nativeCreate
 
 function hashClear() {
   this.__data__ = nativeCreate ? nativeCreate(null) : {};
@@ -26487,13 +26492,13 @@ function hashClear() {
 }
 
 module.exports = hashClear;
-}, 360, null, "lodash/_hashClear.js");
-__d(/* lodash/_nativeCreate.js */function(global, require, module, exports) {var getNative = require(343           ); // 343 = ./_getNative
+}, 462, null, "lodash/_hashClear.js");
+__d(/* lodash/_nativeCreate.js */function(global, require, module, exports) {var getNative = require(445           ); // 445 = ./_getNative
 
 var nativeCreate = getNative(Object, 'create');
 
 module.exports = nativeCreate;
-}, 361, null, "lodash/_nativeCreate.js");
+}, 463, null, "lodash/_nativeCreate.js");
 __d(/* lodash/_hashDelete.js */function(global, require, module, exports) {
 function hashDelete(key) {
   var result = this.has(key) && delete this.__data__[key];
@@ -26502,8 +26507,8 @@ function hashDelete(key) {
 }
 
 module.exports = hashDelete;
-}, 362, null, "lodash/_hashDelete.js");
-__d(/* lodash/_hashGet.js */function(global, require, module, exports) {var nativeCreate = require(361              ); // 361 = ./_nativeCreate
+}, 464, null, "lodash/_hashDelete.js");
+__d(/* lodash/_hashGet.js */function(global, require, module, exports) {var nativeCreate = require(463              ); // 463 = ./_nativeCreate
 
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
 
@@ -26521,8 +26526,8 @@ function hashGet(key) {
 }
 
 module.exports = hashGet;
-}, 363, null, "lodash/_hashGet.js");
-__d(/* lodash/_hashHas.js */function(global, require, module, exports) {var nativeCreate = require(361              ); // 361 = ./_nativeCreate
+}, 465, null, "lodash/_hashGet.js");
+__d(/* lodash/_hashHas.js */function(global, require, module, exports) {var nativeCreate = require(463              ); // 463 = ./_nativeCreate
 
 var objectProto = Object.prototype;
 
@@ -26534,8 +26539,8 @@ function hashHas(key) {
 }
 
 module.exports = hashHas;
-}, 364, null, "lodash/_hashHas.js");
-__d(/* lodash/_hashSet.js */function(global, require, module, exports) {var nativeCreate = require(361              ); // 361 = ./_nativeCreate
+}, 466, null, "lodash/_hashHas.js");
+__d(/* lodash/_hashSet.js */function(global, require, module, exports) {var nativeCreate = require(463              ); // 463 = ./_nativeCreate
 
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
 
@@ -26547,8 +26552,8 @@ function hashSet(key, value) {
 }
 
 module.exports = hashSet;
-}, 365, null, "lodash/_hashSet.js");
-__d(/* lodash/_mapCacheDelete.js */function(global, require, module, exports) {var getMapData = require(367            ); // 367 = ./_getMapData
+}, 467, null, "lodash/_hashSet.js");
+__d(/* lodash/_mapCacheDelete.js */function(global, require, module, exports) {var getMapData = require(469            ); // 469 = ./_getMapData
 
 function mapCacheDelete(key) {
   var result = getMapData(this, key)['delete'](key);
@@ -26557,8 +26562,8 @@ function mapCacheDelete(key) {
 }
 
 module.exports = mapCacheDelete;
-}, 366, null, "lodash/_mapCacheDelete.js");
-__d(/* lodash/_getMapData.js */function(global, require, module, exports) {var isKeyable = require(368           ); // 368 = ./_isKeyable
+}, 468, null, "lodash/_mapCacheDelete.js");
+__d(/* lodash/_getMapData.js */function(global, require, module, exports) {var isKeyable = require(470           ); // 470 = ./_isKeyable
 
 function getMapData(map, key) {
   var data = map.__data__;
@@ -26566,7 +26571,7 @@ function getMapData(map, key) {
 }
 
 module.exports = getMapData;
-}, 367, null, "lodash/_getMapData.js");
+}, 469, null, "lodash/_getMapData.js");
 __d(/* lodash/_isKeyable.js */function(global, require, module, exports) {
 function isKeyable(value) {
   var type = typeof value;
@@ -26574,24 +26579,24 @@ function isKeyable(value) {
 }
 
 module.exports = isKeyable;
-}, 368, null, "lodash/_isKeyable.js");
-__d(/* lodash/_mapCacheGet.js */function(global, require, module, exports) {var getMapData = require(367            ); // 367 = ./_getMapData
+}, 470, null, "lodash/_isKeyable.js");
+__d(/* lodash/_mapCacheGet.js */function(global, require, module, exports) {var getMapData = require(469            ); // 469 = ./_getMapData
 
 function mapCacheGet(key) {
   return getMapData(this, key).get(key);
 }
 
 module.exports = mapCacheGet;
-}, 369, null, "lodash/_mapCacheGet.js");
-__d(/* lodash/_mapCacheHas.js */function(global, require, module, exports) {var getMapData = require(367            ); // 367 = ./_getMapData
+}, 471, null, "lodash/_mapCacheGet.js");
+__d(/* lodash/_mapCacheHas.js */function(global, require, module, exports) {var getMapData = require(469            ); // 469 = ./_getMapData
 
 function mapCacheHas(key) {
   return getMapData(this, key).has(key);
 }
 
 module.exports = mapCacheHas;
-}, 370, null, "lodash/_mapCacheHas.js");
-__d(/* lodash/_mapCacheSet.js */function(global, require, module, exports) {var getMapData = require(367            ); // 367 = ./_getMapData
+}, 472, null, "lodash/_mapCacheHas.js");
+__d(/* lodash/_mapCacheSet.js */function(global, require, module, exports) {var getMapData = require(469            ); // 469 = ./_getMapData
 
 function mapCacheSet(key, value) {
   var data = getMapData(this, key),
@@ -26603,9 +26608,9 @@ function mapCacheSet(key, value) {
 }
 
 module.exports = mapCacheSet;
-}, 371, null, "lodash/_mapCacheSet.js");
-__d(/* lodash/_baseIsEqual.js */function(global, require, module, exports) {var baseIsEqualDeep = require(373                 ), // 373 = ./_baseIsEqualDeep
-    isObjectLike = require(397             ); // 397 = ./isObjectLike
+}, 473, null, "lodash/_mapCacheSet.js");
+__d(/* lodash/_baseIsEqual.js */function(global, require, module, exports) {var baseIsEqualDeep = require(475                 ), // 475 = ./_baseIsEqualDeep
+    isObjectLike = require(499             ); // 499 = ./isObjectLike
 
 function baseIsEqual(value, other, bitmask, customizer, stack) {
   if (value === other) {
@@ -26618,15 +26623,15 @@ function baseIsEqual(value, other, bitmask, customizer, stack) {
 }
 
 module.exports = baseIsEqual;
-}, 372, null, "lodash/_baseIsEqual.js");
-__d(/* lodash/_baseIsEqualDeep.js */function(global, require, module, exports) {var Stack = require(328       ), // 328 = ./_Stack
-    equalArrays = require(374             ), // 374 = ./_equalArrays
-    equalByTag = require(380            ), // 380 = ./_equalByTag
-    equalObjects = require(384              ), // 384 = ./_equalObjects
-    getTag = require(411        ), // 411 = ./_getTag
-    isArray = require(388        ), // 388 = ./isArray
-    isBuffer = require(398         ), // 398 = ./isBuffer
-    isTypedArray = require(401             ); // 401 = ./isTypedArray
+}, 474, null, "lodash/_baseIsEqual.js");
+__d(/* lodash/_baseIsEqualDeep.js */function(global, require, module, exports) {var Stack = require(430       ), // 430 = ./_Stack
+    equalArrays = require(476             ), // 476 = ./_equalArrays
+    equalByTag = require(482            ), // 482 = ./_equalByTag
+    equalObjects = require(486              ), // 486 = ./_equalObjects
+    getTag = require(513        ), // 513 = ./_getTag
+    isArray = require(490        ), // 490 = ./isArray
+    isBuffer = require(500         ), // 500 = ./isBuffer
+    isTypedArray = require(503             ); // 503 = ./isTypedArray
 
 var COMPARE_PARTIAL_FLAG = 1;
 
@@ -26682,10 +26687,10 @@ function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
 }
 
 module.exports = baseIsEqualDeep;
-}, 373, null, "lodash/_baseIsEqualDeep.js");
-__d(/* lodash/_equalArrays.js */function(global, require, module, exports) {var SetCache = require(375          ), // 375 = ./_SetCache
-    arraySome = require(378           ), // 378 = ./_arraySome
-    cacheHas = require(379          ); // 379 = ./_cacheHas
+}, 475, null, "lodash/_baseIsEqualDeep.js");
+__d(/* lodash/_equalArrays.js */function(global, require, module, exports) {var SetCache = require(477          ), // 477 = ./_SetCache
+    arraySome = require(480           ), // 480 = ./_arraySome
+    cacheHas = require(481          ); // 481 = ./_cacheHas
 
 var COMPARE_PARTIAL_FLAG = 1,
     COMPARE_UNORDERED_FLAG = 2;
@@ -26745,10 +26750,10 @@ function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
 }
 
 module.exports = equalArrays;
-}, 374, null, "lodash/_equalArrays.js");
-__d(/* lodash/_SetCache.js */function(global, require, module, exports) {var MapCache = require(357          ), // 357 = ./_MapCache
-    setCacheAdd = require(376             ), // 376 = ./_setCacheAdd
-    setCacheHas = require(377             ); // 377 = ./_setCacheHas
+}, 476, null, "lodash/_equalArrays.js");
+__d(/* lodash/_SetCache.js */function(global, require, module, exports) {var MapCache = require(459          ), // 459 = ./_MapCache
+    setCacheAdd = require(478             ), // 478 = ./_setCacheAdd
+    setCacheHas = require(479             ); // 479 = ./_setCacheHas
 
 function SetCache(values) {
     var index = -1,
@@ -26764,7 +26769,7 @@ SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
 SetCache.prototype.has = setCacheHas;
 
 module.exports = SetCache;
-}, 375, null, "lodash/_SetCache.js");
+}, 477, null, "lodash/_SetCache.js");
 __d(/* lodash/_setCacheAdd.js */function(global, require, module, exports) {
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
 
@@ -26774,14 +26779,14 @@ function setCacheAdd(value) {
 }
 
 module.exports = setCacheAdd;
-}, 376, null, "lodash/_setCacheAdd.js");
+}, 478, null, "lodash/_setCacheAdd.js");
 __d(/* lodash/_setCacheHas.js */function(global, require, module, exports) {
 function setCacheHas(value) {
   return this.__data__.has(value);
 }
 
 module.exports = setCacheHas;
-}, 377, null, "lodash/_setCacheHas.js");
+}, 479, null, "lodash/_setCacheHas.js");
 __d(/* lodash/_arraySome.js */function(global, require, module, exports) {
 function arraySome(array, predicate) {
   var index = -1,
@@ -26796,20 +26801,20 @@ function arraySome(array, predicate) {
 }
 
 module.exports = arraySome;
-}, 378, null, "lodash/_arraySome.js");
+}, 480, null, "lodash/_arraySome.js");
 __d(/* lodash/_cacheHas.js */function(global, require, module, exports) {
 function cacheHas(cache, key) {
   return cache.has(key);
 }
 
 module.exports = cacheHas;
-}, 379, null, "lodash/_cacheHas.js");
-__d(/* lodash/_equalByTag.js */function(global, require, module, exports) {var Symbol = require(347        ), // 347 = ./_Symbol
-    Uint8Array = require(381            ), // 381 = ./_Uint8Array
-    eq = require(333   ), // 333 = ./eq
-    equalArrays = require(374             ), // 374 = ./_equalArrays
-    mapToArray = require(382            ), // 382 = ./_mapToArray
-    setToArray = require(383            ); // 383 = ./_setToArray
+}, 481, null, "lodash/_cacheHas.js");
+__d(/* lodash/_equalByTag.js */function(global, require, module, exports) {var Symbol = require(449        ), // 449 = ./_Symbol
+    Uint8Array = require(483            ), // 483 = ./_Uint8Array
+    eq = require(435   ), // 435 = ./eq
+    equalArrays = require(476             ), // 476 = ./_equalArrays
+    mapToArray = require(484            ), // 484 = ./_mapToArray
+    setToArray = require(485            ); // 485 = ./_setToArray
 
 var COMPARE_PARTIAL_FLAG = 1,
     COMPARE_UNORDERED_FLAG = 2;
@@ -26888,13 +26893,13 @@ function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
 }
 
 module.exports = equalByTag;
-}, 380, null, "lodash/_equalByTag.js");
-__d(/* lodash/_Uint8Array.js */function(global, require, module, exports) {var root = require(348      ); // 348 = ./_root
+}, 482, null, "lodash/_equalByTag.js");
+__d(/* lodash/_Uint8Array.js */function(global, require, module, exports) {var root = require(450      ); // 450 = ./_root
 
 var Uint8Array = root.Uint8Array;
 
 module.exports = Uint8Array;
-}, 381, null, "lodash/_Uint8Array.js");
+}, 483, null, "lodash/_Uint8Array.js");
 __d(/* lodash/_mapToArray.js */function(global, require, module, exports) {
 function mapToArray(map) {
   var index = -1,
@@ -26907,7 +26912,7 @@ function mapToArray(map) {
 }
 
 module.exports = mapToArray;
-}, 382, null, "lodash/_mapToArray.js");
+}, 484, null, "lodash/_mapToArray.js");
 __d(/* lodash/_setToArray.js */function(global, require, module, exports) {
 function setToArray(set) {
   var index = -1,
@@ -26920,8 +26925,8 @@ function setToArray(set) {
 }
 
 module.exports = setToArray;
-}, 383, null, "lodash/_setToArray.js");
-__d(/* lodash/_equalObjects.js */function(global, require, module, exports) {var getAllKeys = require(385            ); // 385 = ./_getAllKeys
+}, 485, null, "lodash/_setToArray.js");
+__d(/* lodash/_equalObjects.js */function(global, require, module, exports) {var getAllKeys = require(487            ); // 487 = ./_getAllKeys
 
 var COMPARE_PARTIAL_FLAG = 1;
 
@@ -26985,19 +26990,19 @@ function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
 }
 
 module.exports = equalObjects;
-}, 384, null, "lodash/_equalObjects.js");
-__d(/* lodash/_getAllKeys.js */function(global, require, module, exports) {var baseGetAllKeys = require(386                ), // 386 = ./_baseGetAllKeys
-    getSymbols = require(389            ), // 389 = ./_getSymbols
-    keys = require(392     ); // 392 = ./keys
+}, 486, null, "lodash/_equalObjects.js");
+__d(/* lodash/_getAllKeys.js */function(global, require, module, exports) {var baseGetAllKeys = require(488                ), // 488 = ./_baseGetAllKeys
+    getSymbols = require(491            ), // 491 = ./_getSymbols
+    keys = require(494     ); // 494 = ./keys
 
 function getAllKeys(object) {
   return baseGetAllKeys(object, keys, getSymbols);
 }
 
 module.exports = getAllKeys;
-}, 385, null, "lodash/_getAllKeys.js");
-__d(/* lodash/_baseGetAllKeys.js */function(global, require, module, exports) {var arrayPush = require(387           ), // 387 = ./_arrayPush
-    isArray = require(388        ); // 388 = ./isArray
+}, 487, null, "lodash/_getAllKeys.js");
+__d(/* lodash/_baseGetAllKeys.js */function(global, require, module, exports) {var arrayPush = require(489           ), // 489 = ./_arrayPush
+    isArray = require(490        ); // 490 = ./isArray
 
 function baseGetAllKeys(object, keysFunc, symbolsFunc) {
   var result = keysFunc(object);
@@ -27005,7 +27010,7 @@ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
 }
 
 module.exports = baseGetAllKeys;
-}, 386, null, "lodash/_baseGetAllKeys.js");
+}, 488, null, "lodash/_baseGetAllKeys.js");
 __d(/* lodash/_arrayPush.js */function(global, require, module, exports) {
 function arrayPush(array, values) {
   var index = -1,
@@ -27019,14 +27024,14 @@ function arrayPush(array, values) {
 }
 
 module.exports = arrayPush;
-}, 387, null, "lodash/_arrayPush.js");
+}, 489, null, "lodash/_arrayPush.js");
 __d(/* lodash/isArray.js */function(global, require, module, exports) {
 var isArray = Array.isArray;
 
 module.exports = isArray;
-}, 388, null, "lodash/isArray.js");
-__d(/* lodash/_getSymbols.js */function(global, require, module, exports) {var arrayFilter = require(390             ), // 390 = ./_arrayFilter
-    stubArray = require(391          ); // 391 = ./stubArray
+}, 490, null, "lodash/isArray.js");
+__d(/* lodash/_getSymbols.js */function(global, require, module, exports) {var arrayFilter = require(492             ), // 492 = ./_arrayFilter
+    stubArray = require(493          ); // 493 = ./stubArray
 
 var objectProto = Object.prototype;
 
@@ -27045,7 +27050,7 @@ var getSymbols = !nativeGetSymbols ? stubArray : function (object) {
 };
 
 module.exports = getSymbols;
-}, 389, null, "lodash/_getSymbols.js");
+}, 491, null, "lodash/_getSymbols.js");
 __d(/* lodash/_arrayFilter.js */function(global, require, module, exports) {
 function arrayFilter(array, predicate) {
   var index = -1,
@@ -27063,30 +27068,30 @@ function arrayFilter(array, predicate) {
 }
 
 module.exports = arrayFilter;
-}, 390, null, "lodash/_arrayFilter.js");
+}, 492, null, "lodash/_arrayFilter.js");
 __d(/* lodash/stubArray.js */function(global, require, module, exports) {
 function stubArray() {
   return [];
 }
 
 module.exports = stubArray;
-}, 391, null, "lodash/stubArray.js");
-__d(/* lodash/keys.js */function(global, require, module, exports) {var arrayLikeKeys = require(393               ), // 393 = ./_arrayLikeKeys
-    baseKeys = require(406          ), // 406 = ./_baseKeys
-    isArrayLike = require(410            ); // 410 = ./isArrayLike
+}, 493, null, "lodash/stubArray.js");
+__d(/* lodash/keys.js */function(global, require, module, exports) {var arrayLikeKeys = require(495               ), // 495 = ./_arrayLikeKeys
+    baseKeys = require(508          ), // 508 = ./_baseKeys
+    isArrayLike = require(512            ); // 512 = ./isArrayLike
 
 function keys(object) {
   return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
 }
 
 module.exports = keys;
-}, 392, null, "lodash/keys.js");
-__d(/* lodash/_arrayLikeKeys.js */function(global, require, module, exports) {var baseTimes = require(394           ), // 394 = ./_baseTimes
-    isArguments = require(395            ), // 395 = ./isArguments
-    isArray = require(388        ), // 388 = ./isArray
-    isBuffer = require(398         ), // 398 = ./isBuffer
-    isIndex = require(400         ), // 400 = ./_isIndex
-    isTypedArray = require(401             ); // 401 = ./isTypedArray
+}, 494, null, "lodash/keys.js");
+__d(/* lodash/_arrayLikeKeys.js */function(global, require, module, exports) {var baseTimes = require(496           ), // 496 = ./_baseTimes
+    isArguments = require(497            ), // 497 = ./isArguments
+    isArray = require(490        ), // 490 = ./isArray
+    isBuffer = require(500         ), // 500 = ./isBuffer
+    isIndex = require(502         ), // 502 = ./_isIndex
+    isTypedArray = require(503             ); // 503 = ./isTypedArray
 
 var objectProto = Object.prototype;
 
@@ -27110,7 +27115,7 @@ function arrayLikeKeys(value, inherited) {
 }
 
 module.exports = arrayLikeKeys;
-}, 393, null, "lodash/_arrayLikeKeys.js");
+}, 495, null, "lodash/_arrayLikeKeys.js");
 __d(/* lodash/_baseTimes.js */function(global, require, module, exports) {
 function baseTimes(n, iteratee) {
   var index = -1,
@@ -27123,9 +27128,9 @@ function baseTimes(n, iteratee) {
 }
 
 module.exports = baseTimes;
-}, 394, null, "lodash/_baseTimes.js");
-__d(/* lodash/isArguments.js */function(global, require, module, exports) {var baseIsArguments = require(396                 ), // 396 = ./_baseIsArguments
-    isObjectLike = require(397             ); // 397 = ./isObjectLike
+}, 496, null, "lodash/_baseTimes.js");
+__d(/* lodash/isArguments.js */function(global, require, module, exports) {var baseIsArguments = require(498                 ), // 498 = ./_baseIsArguments
+    isObjectLike = require(499             ); // 499 = ./isObjectLike
 
 var objectProto = Object.prototype;
 
@@ -27140,9 +27145,9 @@ var isArguments = baseIsArguments(function () {
 };
 
 module.exports = isArguments;
-}, 395, null, "lodash/isArguments.js");
-__d(/* lodash/_baseIsArguments.js */function(global, require, module, exports) {var baseGetTag = require(346            ), // 346 = ./_baseGetTag
-    isObjectLike = require(397             ); // 397 = ./isObjectLike
+}, 497, null, "lodash/isArguments.js");
+__d(/* lodash/_baseIsArguments.js */function(global, require, module, exports) {var baseGetTag = require(448            ), // 448 = ./_baseGetTag
+    isObjectLike = require(499             ); // 499 = ./isObjectLike
 
 var argsTag = '[object Arguments]';
 
@@ -27151,16 +27156,16 @@ function baseIsArguments(value) {
 }
 
 module.exports = baseIsArguments;
-}, 396, null, "lodash/_baseIsArguments.js");
+}, 498, null, "lodash/_baseIsArguments.js");
 __d(/* lodash/isObjectLike.js */function(global, require, module, exports) {
 function isObjectLike(value) {
   return value != null && typeof value == 'object';
 }
 
 module.exports = isObjectLike;
-}, 397, null, "lodash/isObjectLike.js");
-__d(/* lodash/isBuffer.js */function(global, require, module, exports) {var root = require(348      ), // 348 = ./_root
-    stubFalse = require(399          ); // 399 = ./stubFalse
+}, 499, null, "lodash/isObjectLike.js");
+__d(/* lodash/isBuffer.js */function(global, require, module, exports) {var root = require(450      ), // 450 = ./_root
+    stubFalse = require(501          ); // 501 = ./stubFalse
 
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
 
@@ -27175,14 +27180,14 @@ var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
 var isBuffer = nativeIsBuffer || stubFalse;
 
 module.exports = isBuffer;
-}, 398, null, "lodash/isBuffer.js");
+}, 500, null, "lodash/isBuffer.js");
 __d(/* lodash/stubFalse.js */function(global, require, module, exports) {
 function stubFalse() {
   return false;
 }
 
 module.exports = stubFalse;
-}, 399, null, "lodash/stubFalse.js");
+}, 501, null, "lodash/stubFalse.js");
 __d(/* lodash/_isIndex.js */function(global, require, module, exports) {
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -27194,20 +27199,20 @@ function isIndex(value, length) {
 }
 
 module.exports = isIndex;
-}, 400, null, "lodash/_isIndex.js");
-__d(/* lodash/isTypedArray.js */function(global, require, module, exports) {var baseIsTypedArray = require(402                  ), // 402 = ./_baseIsTypedArray
-    baseUnary = require(404           ), // 404 = ./_baseUnary
-    nodeUtil = require(405          ); // 405 = ./_nodeUtil
+}, 502, null, "lodash/_isIndex.js");
+__d(/* lodash/isTypedArray.js */function(global, require, module, exports) {var baseIsTypedArray = require(504                  ), // 504 = ./_baseIsTypedArray
+    baseUnary = require(506           ), // 506 = ./_baseUnary
+    nodeUtil = require(507          ); // 507 = ./_nodeUtil
 
 var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
 
 var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
 
 module.exports = isTypedArray;
-}, 401, null, "lodash/isTypedArray.js");
-__d(/* lodash/_baseIsTypedArray.js */function(global, require, module, exports) {var baseGetTag = require(346            ), // 346 = ./_baseGetTag
-    isLength = require(403         ), // 403 = ./isLength
-    isObjectLike = require(397             ); // 397 = ./isObjectLike
+}, 503, null, "lodash/isTypedArray.js");
+__d(/* lodash/_baseIsTypedArray.js */function(global, require, module, exports) {var baseGetTag = require(448            ), // 448 = ./_baseGetTag
+    isLength = require(505         ), // 505 = ./isLength
+    isObjectLike = require(499             ); // 499 = ./isObjectLike
 
 var argsTag = '[object Arguments]',
     arrayTag = '[object Array]',
@@ -27244,7 +27249,7 @@ function baseIsTypedArray(value) {
 }
 
 module.exports = baseIsTypedArray;
-}, 402, null, "lodash/_baseIsTypedArray.js");
+}, 504, null, "lodash/_baseIsTypedArray.js");
 __d(/* lodash/isLength.js */function(global, require, module, exports) {
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -27253,7 +27258,7 @@ function isLength(value) {
 }
 
 module.exports = isLength;
-}, 403, null, "lodash/isLength.js");
+}, 505, null, "lodash/isLength.js");
 __d(/* lodash/_baseUnary.js */function(global, require, module, exports) {
 function baseUnary(func) {
   return function (value) {
@@ -27262,8 +27267,8 @@ function baseUnary(func) {
 }
 
 module.exports = baseUnary;
-}, 404, null, "lodash/_baseUnary.js");
-__d(/* lodash/_nodeUtil.js */function(global, require, module, exports) {var freeGlobal = require(349            ); // 349 = ./_freeGlobal
+}, 506, null, "lodash/_baseUnary.js");
+__d(/* lodash/_nodeUtil.js */function(global, require, module, exports) {var freeGlobal = require(451            ); // 451 = ./_freeGlobal
 
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
 
@@ -27280,9 +27285,9 @@ var nodeUtil = function () {
 }();
 
 module.exports = nodeUtil;
-}, 405, null, "lodash/_nodeUtil.js");
-__d(/* lodash/_baseKeys.js */function(global, require, module, exports) {var isPrototype = require(407             ), // 407 = ./_isPrototype
-    nativeKeys = require(408            ); // 408 = ./_nativeKeys
+}, 507, null, "lodash/_nodeUtil.js");
+__d(/* lodash/_baseKeys.js */function(global, require, module, exports) {var isPrototype = require(509             ), // 509 = ./_isPrototype
+    nativeKeys = require(510            ); // 510 = ./_nativeKeys
 
 var objectProto = Object.prototype;
 
@@ -27302,7 +27307,7 @@ function baseKeys(object) {
 }
 
 module.exports = baseKeys;
-}, 406, null, "lodash/_baseKeys.js");
+}, 508, null, "lodash/_baseKeys.js");
 __d(/* lodash/_isPrototype.js */function(global, require, module, exports) {
 var objectProto = Object.prototype;
 
@@ -27314,13 +27319,13 @@ function isPrototype(value) {
 }
 
 module.exports = isPrototype;
-}, 407, null, "lodash/_isPrototype.js");
-__d(/* lodash/_nativeKeys.js */function(global, require, module, exports) {var overArg = require(409         ); // 409 = ./_overArg
+}, 509, null, "lodash/_isPrototype.js");
+__d(/* lodash/_nativeKeys.js */function(global, require, module, exports) {var overArg = require(511         ); // 511 = ./_overArg
 
 var nativeKeys = overArg(Object.keys, Object);
 
 module.exports = nativeKeys;
-}, 408, null, "lodash/_nativeKeys.js");
+}, 510, null, "lodash/_nativeKeys.js");
 __d(/* lodash/_overArg.js */function(global, require, module, exports) {
 function overArg(func, transform) {
   return function (arg) {
@@ -27329,23 +27334,23 @@ function overArg(func, transform) {
 }
 
 module.exports = overArg;
-}, 409, null, "lodash/_overArg.js");
-__d(/* lodash/isArrayLike.js */function(global, require, module, exports) {var isFunction = require(345           ), // 345 = ./isFunction
-    isLength = require(403         ); // 403 = ./isLength
+}, 511, null, "lodash/_overArg.js");
+__d(/* lodash/isArrayLike.js */function(global, require, module, exports) {var isFunction = require(447           ), // 447 = ./isFunction
+    isLength = require(505         ); // 505 = ./isLength
 
 function isArrayLike(value) {
   return value != null && isLength(value.length) && !isFunction(value);
 }
 
 module.exports = isArrayLike;
-}, 410, null, "lodash/isArrayLike.js");
-__d(/* lodash/_getTag.js */function(global, require, module, exports) {var DataView = require(412          ), // 412 = ./_DataView
-    Map = require(342     ), // 342 = ./_Map
-    Promise = require(413         ), // 413 = ./_Promise
-    Set = require(414     ), // 414 = ./_Set
-    WeakMap = require(415         ), // 415 = ./_WeakMap
-    baseGetTag = require(346            ), // 346 = ./_baseGetTag
-    toSource = require(355          ); // 355 = ./_toSource
+}, 512, null, "lodash/isArrayLike.js");
+__d(/* lodash/_getTag.js */function(global, require, module, exports) {var DataView = require(514          ), // 514 = ./_DataView
+    Map = require(444     ), // 444 = ./_Map
+    Promise = require(515         ), // 515 = ./_Promise
+    Set = require(516     ), // 516 = ./_Set
+    WeakMap = require(517         ), // 517 = ./_WeakMap
+    baseGetTag = require(448            ), // 448 = ./_baseGetTag
+    toSource = require(457          ); // 457 = ./_toSource
 
 var mapTag = '[object Map]',
     objectTag = '[object Object]',
@@ -27388,37 +27393,37 @@ if (DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag || Map &
 }
 
 module.exports = getTag;
-}, 411, null, "lodash/_getTag.js");
-__d(/* lodash/_DataView.js */function(global, require, module, exports) {var getNative = require(343           ), // 343 = ./_getNative
-    root = require(348      ); // 348 = ./_root
+}, 513, null, "lodash/_getTag.js");
+__d(/* lodash/_DataView.js */function(global, require, module, exports) {var getNative = require(445           ), // 445 = ./_getNative
+    root = require(450      ); // 450 = ./_root
 
 var DataView = getNative(root, 'DataView');
 
 module.exports = DataView;
-}, 412, null, "lodash/_DataView.js");
-__d(/* lodash/_Promise.js */function(global, require, module, exports) {var getNative = require(343           ), // 343 = ./_getNative
-    root = require(348      ); // 348 = ./_root
+}, 514, null, "lodash/_DataView.js");
+__d(/* lodash/_Promise.js */function(global, require, module, exports) {var getNative = require(445           ), // 445 = ./_getNative
+    root = require(450      ); // 450 = ./_root
 
 var Promise = getNative(root, 'Promise');
 
 module.exports = Promise;
-}, 413, null, "lodash/_Promise.js");
-__d(/* lodash/_Set.js */function(global, require, module, exports) {var getNative = require(343           ), // 343 = ./_getNative
-    root = require(348      ); // 348 = ./_root
+}, 515, null, "lodash/_Promise.js");
+__d(/* lodash/_Set.js */function(global, require, module, exports) {var getNative = require(445           ), // 445 = ./_getNative
+    root = require(450      ); // 450 = ./_root
 
 var Set = getNative(root, 'Set');
 
 module.exports = Set;
-}, 414, null, "lodash/_Set.js");
-__d(/* lodash/_WeakMap.js */function(global, require, module, exports) {var getNative = require(343           ), // 343 = ./_getNative
-    root = require(348      ); // 348 = ./_root
+}, 516, null, "lodash/_Set.js");
+__d(/* lodash/_WeakMap.js */function(global, require, module, exports) {var getNative = require(445           ), // 445 = ./_getNative
+    root = require(450      ); // 450 = ./_root
 
 var WeakMap = getNative(root, 'WeakMap');
 
 module.exports = WeakMap;
-}, 415, null, "lodash/_WeakMap.js");
-__d(/* lodash/_getMatchData.js */function(global, require, module, exports) {var isStrictComparable = require(417                    ), // 417 = ./_isStrictComparable
-    keys = require(392     ); // 392 = ./keys
+}, 517, null, "lodash/_WeakMap.js");
+__d(/* lodash/_getMatchData.js */function(global, require, module, exports) {var isStrictComparable = require(519                    ), // 519 = ./_isStrictComparable
+    keys = require(494     ); // 494 = ./keys
 
 function getMatchData(object) {
     var result = keys(object),
@@ -27434,15 +27439,15 @@ function getMatchData(object) {
 }
 
 module.exports = getMatchData;
-}, 416, null, "lodash/_getMatchData.js");
-__d(/* lodash/_isStrictComparable.js */function(global, require, module, exports) {var isObject = require(352         ); // 352 = ./isObject
+}, 518, null, "lodash/_getMatchData.js");
+__d(/* lodash/_isStrictComparable.js */function(global, require, module, exports) {var isObject = require(454         ); // 454 = ./isObject
 
 function isStrictComparable(value) {
   return value === value && !isObject(value);
 }
 
 module.exports = isStrictComparable;
-}, 417, null, "lodash/_isStrictComparable.js");
+}, 519, null, "lodash/_isStrictComparable.js");
 __d(/* lodash/_matchesStrictComparable.js */function(global, require, module, exports) {
 function matchesStrictComparable(key, srcValue) {
   return function (object) {
@@ -27454,14 +27459,14 @@ function matchesStrictComparable(key, srcValue) {
 }
 
 module.exports = matchesStrictComparable;
-}, 418, null, "lodash/_matchesStrictComparable.js");
-__d(/* lodash/_baseMatchesProperty.js */function(global, require, module, exports) {var baseIsEqual = require(372             ), // 372 = ./_baseIsEqual
-    get = require(420    ), // 420 = ./get
-    hasIn = require(432      ), // 432 = ./hasIn
-    isKey = require(423       ), // 423 = ./_isKey
-    isStrictComparable = require(417                    ), // 417 = ./_isStrictComparable
-    matchesStrictComparable = require(418                         ), // 418 = ./_matchesStrictComparable
-    toKey = require(431       ); // 431 = ./_toKey
+}, 520, null, "lodash/_matchesStrictComparable.js");
+__d(/* lodash/_baseMatchesProperty.js */function(global, require, module, exports) {var baseIsEqual = require(474             ), // 474 = ./_baseIsEqual
+    get = require(522    ), // 522 = ./get
+    hasIn = require(534      ), // 534 = ./hasIn
+    isKey = require(525       ), // 525 = ./_isKey
+    isStrictComparable = require(519                    ), // 519 = ./_isStrictComparable
+    matchesStrictComparable = require(520                         ), // 520 = ./_matchesStrictComparable
+    toKey = require(533       ); // 533 = ./_toKey
 
 var COMPARE_PARTIAL_FLAG = 1,
     COMPARE_UNORDERED_FLAG = 2;
@@ -27477,8 +27482,8 @@ function baseMatchesProperty(path, srcValue) {
 }
 
 module.exports = baseMatchesProperty;
-}, 419, null, "lodash/_baseMatchesProperty.js");
-__d(/* lodash/get.js */function(global, require, module, exports) {var baseGet = require(421         ); // 421 = ./_baseGet
+}, 521, null, "lodash/_baseMatchesProperty.js");
+__d(/* lodash/get.js */function(global, require, module, exports) {var baseGet = require(523         ); // 523 = ./_baseGet
 
 function get(object, path, defaultValue) {
   var result = object == null ? undefined : baseGet(object, path);
@@ -27486,9 +27491,9 @@ function get(object, path, defaultValue) {
 }
 
 module.exports = get;
-}, 420, null, "lodash/get.js");
-__d(/* lodash/_baseGet.js */function(global, require, module, exports) {var castPath = require(422          ), // 422 = ./_castPath
-    toKey = require(431       ); // 431 = ./_toKey
+}, 522, null, "lodash/get.js");
+__d(/* lodash/_baseGet.js */function(global, require, module, exports) {var castPath = require(524          ), // 524 = ./_castPath
+    toKey = require(533       ); // 533 = ./_toKey
 
 function baseGet(object, path) {
   path = castPath(path, object);
@@ -27503,11 +27508,11 @@ function baseGet(object, path) {
 }
 
 module.exports = baseGet;
-}, 421, null, "lodash/_baseGet.js");
-__d(/* lodash/_castPath.js */function(global, require, module, exports) {var isArray = require(388        ), // 388 = ./isArray
-    isKey = require(423       ), // 423 = ./_isKey
-    stringToPath = require(425              ), // 425 = ./_stringToPath
-    toString = require(428         ); // 428 = ./toString
+}, 523, null, "lodash/_baseGet.js");
+__d(/* lodash/_castPath.js */function(global, require, module, exports) {var isArray = require(490        ), // 490 = ./isArray
+    isKey = require(525       ), // 525 = ./_isKey
+    stringToPath = require(527              ), // 527 = ./_stringToPath
+    toString = require(530         ); // 530 = ./toString
 
 function castPath(value, object) {
   if (isArray(value)) {
@@ -27517,9 +27522,9 @@ function castPath(value, object) {
 }
 
 module.exports = castPath;
-}, 422, null, "lodash/_castPath.js");
-__d(/* lodash/_isKey.js */function(global, require, module, exports) {var isArray = require(388        ), // 388 = ./isArray
-    isSymbol = require(424         ); // 424 = ./isSymbol
+}, 524, null, "lodash/_castPath.js");
+__d(/* lodash/_isKey.js */function(global, require, module, exports) {var isArray = require(490        ), // 490 = ./isArray
+    isSymbol = require(526         ); // 526 = ./isSymbol
 
 var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
     reIsPlainProp = /^\w*$/;
@@ -27536,9 +27541,9 @@ function isKey(value, object) {
 }
 
 module.exports = isKey;
-}, 423, null, "lodash/_isKey.js");
-__d(/* lodash/isSymbol.js */function(global, require, module, exports) {var baseGetTag = require(346            ), // 346 = ./_baseGetTag
-    isObjectLike = require(397             ); // 397 = ./isObjectLike
+}, 525, null, "lodash/_isKey.js");
+__d(/* lodash/isSymbol.js */function(global, require, module, exports) {var baseGetTag = require(448            ), // 448 = ./_baseGetTag
+    isObjectLike = require(499             ); // 499 = ./isObjectLike
 
 var symbolTag = '[object Symbol]';
 
@@ -27547,8 +27552,8 @@ function isSymbol(value) {
 }
 
 module.exports = isSymbol;
-}, 424, null, "lodash/isSymbol.js");
-__d(/* lodash/_stringToPath.js */function(global, require, module, exports) {var memoizeCapped = require(426               ); // 426 = ./_memoizeCapped
+}, 526, null, "lodash/isSymbol.js");
+__d(/* lodash/_stringToPath.js */function(global, require, module, exports) {var memoizeCapped = require(528               ); // 528 = ./_memoizeCapped
 
 var reLeadingDot = /^\./,
     rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
@@ -27567,8 +27572,8 @@ var stringToPath = memoizeCapped(function (string) {
 });
 
 module.exports = stringToPath;
-}, 425, null, "lodash/_stringToPath.js");
-__d(/* lodash/_memoizeCapped.js */function(global, require, module, exports) {var memoize = require(427        ); // 427 = ./memoize
+}, 527, null, "lodash/_stringToPath.js");
+__d(/* lodash/_memoizeCapped.js */function(global, require, module, exports) {var memoize = require(529        ); // 529 = ./memoize
 
 var MAX_MEMOIZE_SIZE = 500;
 
@@ -27585,8 +27590,8 @@ function memoizeCapped(func) {
 }
 
 module.exports = memoizeCapped;
-}, 426, null, "lodash/_memoizeCapped.js");
-__d(/* lodash/memoize.js */function(global, require, module, exports) {var MapCache = require(357          ); // 357 = ./_MapCache
+}, 528, null, "lodash/_memoizeCapped.js");
+__d(/* lodash/memoize.js */function(global, require, module, exports) {var MapCache = require(459          ); // 459 = ./_MapCache
 
 var FUNC_ERROR_TEXT = 'Expected a function';
 
@@ -27613,19 +27618,19 @@ function memoize(func, resolver) {
 memoize.Cache = MapCache;
 
 module.exports = memoize;
-}, 427, null, "lodash/memoize.js");
-__d(/* lodash/toString.js */function(global, require, module, exports) {var baseToString = require(429              ); // 429 = ./_baseToString
+}, 529, null, "lodash/memoize.js");
+__d(/* lodash/toString.js */function(global, require, module, exports) {var baseToString = require(531              ); // 531 = ./_baseToString
 
 function toString(value) {
   return value == null ? '' : baseToString(value);
 }
 
 module.exports = toString;
-}, 428, null, "lodash/toString.js");
-__d(/* lodash/_baseToString.js */function(global, require, module, exports) {var Symbol = require(347        ), // 347 = ./_Symbol
-    arrayMap = require(430          ), // 430 = ./_arrayMap
-    isArray = require(388        ), // 388 = ./isArray
-    isSymbol = require(424         ); // 424 = ./isSymbol
+}, 530, null, "lodash/toString.js");
+__d(/* lodash/_baseToString.js */function(global, require, module, exports) {var Symbol = require(449        ), // 449 = ./_Symbol
+    arrayMap = require(532          ), // 532 = ./_arrayMap
+    isArray = require(490        ), // 490 = ./isArray
+    isSymbol = require(526         ); // 526 = ./isSymbol
 
 var INFINITY = 1 / 0;
 
@@ -27647,7 +27652,7 @@ function baseToString(value) {
 }
 
 module.exports = baseToString;
-}, 429, null, "lodash/_baseToString.js");
+}, 531, null, "lodash/_baseToString.js");
 __d(/* lodash/_arrayMap.js */function(global, require, module, exports) {
 function arrayMap(array, iteratee) {
   var index = -1,
@@ -27661,8 +27666,8 @@ function arrayMap(array, iteratee) {
 }
 
 module.exports = arrayMap;
-}, 430, null, "lodash/_arrayMap.js");
-__d(/* lodash/_toKey.js */function(global, require, module, exports) {var isSymbol = require(424         ); // 424 = ./isSymbol
+}, 532, null, "lodash/_arrayMap.js");
+__d(/* lodash/_toKey.js */function(global, require, module, exports) {var isSymbol = require(526         ); // 526 = ./isSymbol
 
 var INFINITY = 1 / 0;
 
@@ -27675,29 +27680,29 @@ function toKey(value) {
 }
 
 module.exports = toKey;
-}, 431, null, "lodash/_toKey.js");
-__d(/* lodash/hasIn.js */function(global, require, module, exports) {var baseHasIn = require(433           ), // 433 = ./_baseHasIn
-    hasPath = require(434         ); // 434 = ./_hasPath
+}, 533, null, "lodash/_toKey.js");
+__d(/* lodash/hasIn.js */function(global, require, module, exports) {var baseHasIn = require(535           ), // 535 = ./_baseHasIn
+    hasPath = require(536         ); // 536 = ./_hasPath
 
 function hasIn(object, path) {
   return object != null && hasPath(object, path, baseHasIn);
 }
 
 module.exports = hasIn;
-}, 432, null, "lodash/hasIn.js");
+}, 534, null, "lodash/hasIn.js");
 __d(/* lodash/_baseHasIn.js */function(global, require, module, exports) {
 function baseHasIn(object, key) {
   return object != null && key in Object(object);
 }
 
 module.exports = baseHasIn;
-}, 433, null, "lodash/_baseHasIn.js");
-__d(/* lodash/_hasPath.js */function(global, require, module, exports) {var castPath = require(422          ), // 422 = ./_castPath
-    isArguments = require(395            ), // 395 = ./isArguments
-    isArray = require(388        ), // 388 = ./isArray
-    isIndex = require(400         ), // 400 = ./_isIndex
-    isLength = require(403         ), // 403 = ./isLength
-    toKey = require(431       ); // 431 = ./_toKey
+}, 535, null, "lodash/_baseHasIn.js");
+__d(/* lodash/_hasPath.js */function(global, require, module, exports) {var castPath = require(524          ), // 524 = ./_castPath
+    isArguments = require(497            ), // 497 = ./isArguments
+    isArray = require(490        ), // 490 = ./isArray
+    isIndex = require(502         ), // 502 = ./_isIndex
+    isLength = require(505         ), // 505 = ./isLength
+    toKey = require(533       ); // 533 = ./_toKey
 
 function hasPath(object, path, hasFunc) {
   path = castPath(path, object);
@@ -27721,25 +27726,25 @@ function hasPath(object, path, hasFunc) {
 }
 
 module.exports = hasPath;
-}, 434, null, "lodash/_hasPath.js");
+}, 536, null, "lodash/_hasPath.js");
 __d(/* lodash/identity.js */function(global, require, module, exports) {
 function identity(value) {
   return value;
 }
 
 module.exports = identity;
-}, 435, null, "lodash/identity.js");
-__d(/* lodash/property.js */function(global, require, module, exports) {var baseProperty = require(437              ), // 437 = ./_baseProperty
-    basePropertyDeep = require(438                  ), // 438 = ./_basePropertyDeep
-    isKey = require(423       ), // 423 = ./_isKey
-    toKey = require(431       ); // 431 = ./_toKey
+}, 537, null, "lodash/identity.js");
+__d(/* lodash/property.js */function(global, require, module, exports) {var baseProperty = require(539              ), // 539 = ./_baseProperty
+    basePropertyDeep = require(540                  ), // 540 = ./_basePropertyDeep
+    isKey = require(525       ), // 525 = ./_isKey
+    toKey = require(533       ); // 533 = ./_toKey
 
 function property(path) {
   return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);
 }
 
 module.exports = property;
-}, 436, null, "lodash/property.js");
+}, 538, null, "lodash/property.js");
 __d(/* lodash/_baseProperty.js */function(global, require, module, exports) {
 function baseProperty(key) {
   return function (object) {
@@ -27748,8 +27753,8 @@ function baseProperty(key) {
 }
 
 module.exports = baseProperty;
-}, 437, null, "lodash/_baseProperty.js");
-__d(/* lodash/_basePropertyDeep.js */function(global, require, module, exports) {var baseGet = require(421         ); // 421 = ./_baseGet
+}, 539, null, "lodash/_baseProperty.js");
+__d(/* lodash/_basePropertyDeep.js */function(global, require, module, exports) {var baseGet = require(523         ); // 523 = ./_baseGet
 
 function basePropertyDeep(path) {
   return function (object) {
@@ -27758,10 +27763,10 @@ function basePropertyDeep(path) {
 }
 
 module.exports = basePropertyDeep;
-}, 438, null, "lodash/_basePropertyDeep.js");
-__d(/* lodash/findIndex.js */function(global, require, module, exports) {var baseFindIndex = require(440               ), // 440 = ./_baseFindIndex
-    baseIteratee = require(325              ), // 325 = ./_baseIteratee
-    toInteger = require(441          ); // 441 = ./toInteger
+}, 540, null, "lodash/_basePropertyDeep.js");
+__d(/* lodash/findIndex.js */function(global, require, module, exports) {var baseFindIndex = require(542               ), // 542 = ./_baseFindIndex
+    baseIteratee = require(427              ), // 427 = ./_baseIteratee
+    toInteger = require(543          ); // 543 = ./toInteger
 
 var nativeMax = Math.max;
 
@@ -27778,7 +27783,7 @@ function findIndex(array, predicate, fromIndex) {
 }
 
 module.exports = findIndex;
-}, 439, null, "lodash/findIndex.js");
+}, 541, null, "lodash/findIndex.js");
 __d(/* lodash/_baseFindIndex.js */function(global, require, module, exports) {
 function baseFindIndex(array, predicate, fromIndex, fromRight) {
   var length = array.length,
@@ -27793,8 +27798,8 @@ function baseFindIndex(array, predicate, fromIndex, fromRight) {
 }
 
 module.exports = baseFindIndex;
-}, 440, null, "lodash/_baseFindIndex.js");
-__d(/* lodash/toInteger.js */function(global, require, module, exports) {var toFinite = require(442         ); // 442 = ./toFinite
+}, 542, null, "lodash/_baseFindIndex.js");
+__d(/* lodash/toInteger.js */function(global, require, module, exports) {var toFinite = require(544         ); // 544 = ./toFinite
 
 function toInteger(value) {
   var result = toFinite(value),
@@ -27804,8 +27809,8 @@ function toInteger(value) {
 }
 
 module.exports = toInteger;
-}, 441, null, "lodash/toInteger.js");
-__d(/* lodash/toFinite.js */function(global, require, module, exports) {var toNumber = require(443         ); // 443 = ./toNumber
+}, 543, null, "lodash/toInteger.js");
+__d(/* lodash/toFinite.js */function(global, require, module, exports) {var toNumber = require(545         ); // 545 = ./toNumber
 
 var INFINITY = 1 / 0,
     MAX_INTEGER = 1.7976931348623157e+308;
@@ -27823,9 +27828,9 @@ function toFinite(value) {
 }
 
 module.exports = toFinite;
-}, 442, null, "lodash/toFinite.js");
-__d(/* lodash/toNumber.js */function(global, require, module, exports) {var isObject = require(352         ), // 352 = ./isObject
-    isSymbol = require(424         ); // 424 = ./isSymbol
+}, 544, null, "lodash/toFinite.js");
+__d(/* lodash/toNumber.js */function(global, require, module, exports) {var isObject = require(454         ), // 454 = ./isObject
+    isSymbol = require(526         ); // 526 = ./isSymbol
 
 var NAN = 0 / 0;
 
@@ -27859,7 +27864,7 @@ function toNumber(value) {
 }
 
 module.exports = toNumber;
-}, 443, null, "lodash/toNumber.js");
+}, 545, null, "lodash/toNumber.js");
 __d(/* react-proxy/modules/createPrototypeProxy.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27867,11 +27872,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = createPrototypeProxy;
 
-var _assign = require(445            ); // 445 = lodash/assign
+var _assign = require(547            ); // 547 = lodash/assign
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _difference = require(459                ); // 459 = lodash/difference
+var _difference = require(561                ); // 561 = lodash/difference
 
 var _difference2 = _interopRequireDefault(_difference);
 
@@ -28022,13 +28027,13 @@ function createPrototypeProxy() {
     get: get
   };
 };
-}, 444, null, "react-proxy/modules/createPrototypeProxy.js");
-__d(/* lodash/assign.js */function(global, require, module, exports) {var assignValue = require(446             ), // 446 = ./_assignValue
-    copyObject = require(449            ), // 449 = ./_copyObject
-    createAssigner = require(450                ), // 450 = ./_createAssigner
-    isArrayLike = require(410            ), // 410 = ./isArrayLike
-    isPrototype = require(407             ), // 407 = ./_isPrototype
-    keys = require(392     ); // 392 = ./keys
+}, 546, null, "react-proxy/modules/createPrototypeProxy.js");
+__d(/* lodash/assign.js */function(global, require, module, exports) {var assignValue = require(548             ), // 548 = ./_assignValue
+    copyObject = require(551            ), // 551 = ./_copyObject
+    createAssigner = require(552                ), // 552 = ./_createAssigner
+    isArrayLike = require(512            ), // 512 = ./isArrayLike
+    isPrototype = require(509             ), // 509 = ./_isPrototype
+    keys = require(494     ); // 494 = ./keys
 
 var objectProto = Object.prototype;
 
@@ -28047,9 +28052,9 @@ var assign = createAssigner(function (object, source) {
 });
 
 module.exports = assign;
-}, 445, null, "lodash/assign.js");
-__d(/* lodash/_assignValue.js */function(global, require, module, exports) {var baseAssignValue = require(447                 ), // 447 = ./_baseAssignValue
-    eq = require(333   ); // 333 = ./eq
+}, 547, null, "lodash/assign.js");
+__d(/* lodash/_assignValue.js */function(global, require, module, exports) {var baseAssignValue = require(549                 ), // 549 = ./_baseAssignValue
+    eq = require(435   ); // 435 = ./eq
 
 var objectProto = Object.prototype;
 
@@ -28063,8 +28068,8 @@ function assignValue(object, key, value) {
 }
 
 module.exports = assignValue;
-}, 446, null, "lodash/_assignValue.js");
-__d(/* lodash/_baseAssignValue.js */function(global, require, module, exports) {var defineProperty = require(448                ); // 448 = ./_defineProperty
+}, 548, null, "lodash/_assignValue.js");
+__d(/* lodash/_baseAssignValue.js */function(global, require, module, exports) {var defineProperty = require(550                ); // 550 = ./_defineProperty
 
 function baseAssignValue(object, key, value) {
   if (key == '__proto__' && defineProperty) {
@@ -28080,8 +28085,8 @@ function baseAssignValue(object, key, value) {
 }
 
 module.exports = baseAssignValue;
-}, 447, null, "lodash/_baseAssignValue.js");
-__d(/* lodash/_defineProperty.js */function(global, require, module, exports) {var getNative = require(343           ); // 343 = ./_getNative
+}, 549, null, "lodash/_baseAssignValue.js");
+__d(/* lodash/_defineProperty.js */function(global, require, module, exports) {var getNative = require(445           ); // 445 = ./_getNative
 
 var defineProperty = function () {
   try {
@@ -28092,9 +28097,9 @@ var defineProperty = function () {
 }();
 
 module.exports = defineProperty;
-}, 448, null, "lodash/_defineProperty.js");
-__d(/* lodash/_copyObject.js */function(global, require, module, exports) {var assignValue = require(446             ), // 446 = ./_assignValue
-    baseAssignValue = require(447                 ); // 447 = ./_baseAssignValue
+}, 550, null, "lodash/_defineProperty.js");
+__d(/* lodash/_copyObject.js */function(global, require, module, exports) {var assignValue = require(548             ), // 548 = ./_assignValue
+    baseAssignValue = require(549                 ); // 549 = ./_baseAssignValue
 
 function copyObject(source, props, object, customizer) {
   var isNew = !object;
@@ -28121,9 +28126,9 @@ function copyObject(source, props, object, customizer) {
 }
 
 module.exports = copyObject;
-}, 449, null, "lodash/_copyObject.js");
-__d(/* lodash/_createAssigner.js */function(global, require, module, exports) {var baseRest = require(451          ), // 451 = ./_baseRest
-    isIterateeCall = require(458                ); // 458 = ./_isIterateeCall
+}, 551, null, "lodash/_copyObject.js");
+__d(/* lodash/_createAssigner.js */function(global, require, module, exports) {var baseRest = require(553          ), // 553 = ./_baseRest
+    isIterateeCall = require(560                ); // 560 = ./_isIterateeCall
 
 function createAssigner(assigner) {
   return baseRest(function (object, sources) {
@@ -28150,18 +28155,18 @@ function createAssigner(assigner) {
 }
 
 module.exports = createAssigner;
-}, 450, null, "lodash/_createAssigner.js");
-__d(/* lodash/_baseRest.js */function(global, require, module, exports) {var identity = require(435         ), // 435 = ./identity
-    overRest = require(452          ), // 452 = ./_overRest
-    setToString = require(454             ); // 454 = ./_setToString
+}, 552, null, "lodash/_createAssigner.js");
+__d(/* lodash/_baseRest.js */function(global, require, module, exports) {var identity = require(537         ), // 537 = ./identity
+    overRest = require(554          ), // 554 = ./_overRest
+    setToString = require(556             ); // 556 = ./_setToString
 
 function baseRest(func, start) {
   return setToString(overRest(func, start, identity), func + '');
 }
 
 module.exports = baseRest;
-}, 451, null, "lodash/_baseRest.js");
-__d(/* lodash/_overRest.js */function(global, require, module, exports) {var apply = require(453       ); // 453 = ./_apply
+}, 553, null, "lodash/_baseRest.js");
+__d(/* lodash/_overRest.js */function(global, require, module, exports) {var apply = require(555       ); // 555 = ./_apply
 
 var nativeMax = Math.max;
 
@@ -28187,7 +28192,7 @@ function overRest(func, start, transform) {
 }
 
 module.exports = overRest;
-}, 452, null, "lodash/_overRest.js");
+}, 554, null, "lodash/_overRest.js");
 __d(/* lodash/_apply.js */function(global, require, module, exports) {
 function apply(func, thisArg, args) {
   switch (args.length) {
@@ -28204,17 +28209,17 @@ function apply(func, thisArg, args) {
 }
 
 module.exports = apply;
-}, 453, null, "lodash/_apply.js");
-__d(/* lodash/_setToString.js */function(global, require, module, exports) {var baseSetToString = require(455                 ), // 455 = ./_baseSetToString
-    shortOut = require(457          ); // 457 = ./_shortOut
+}, 555, null, "lodash/_apply.js");
+__d(/* lodash/_setToString.js */function(global, require, module, exports) {var baseSetToString = require(557                 ), // 557 = ./_baseSetToString
+    shortOut = require(559          ); // 559 = ./_shortOut
 
 var setToString = shortOut(baseSetToString);
 
 module.exports = setToString;
-}, 454, null, "lodash/_setToString.js");
-__d(/* lodash/_baseSetToString.js */function(global, require, module, exports) {var constant = require(456         ), // 456 = ./constant
-    defineProperty = require(448                ), // 448 = ./_defineProperty
-    identity = require(435         ); // 435 = ./identity
+}, 556, null, "lodash/_setToString.js");
+__d(/* lodash/_baseSetToString.js */function(global, require, module, exports) {var constant = require(558         ), // 558 = ./constant
+    defineProperty = require(550                ), // 550 = ./_defineProperty
+    identity = require(537         ); // 537 = ./identity
 
 var baseSetToString = !defineProperty ? identity : function (func, string) {
   return defineProperty(func, 'toString', {
@@ -28226,7 +28231,7 @@ var baseSetToString = !defineProperty ? identity : function (func, string) {
 };
 
 module.exports = baseSetToString;
-}, 455, null, "lodash/_baseSetToString.js");
+}, 557, null, "lodash/_baseSetToString.js");
 __d(/* lodash/constant.js */function(global, require, module, exports) {
 function constant(value) {
   return function () {
@@ -28235,7 +28240,7 @@ function constant(value) {
 }
 
 module.exports = constant;
-}, 456, null, "lodash/constant.js");
+}, 558, null, "lodash/constant.js");
 __d(/* lodash/_shortOut.js */function(global, require, module, exports) {
 var HOT_COUNT = 800,
     HOT_SPAN = 16;
@@ -28263,11 +28268,11 @@ function shortOut(func) {
 }
 
 module.exports = shortOut;
-}, 457, null, "lodash/_shortOut.js");
-__d(/* lodash/_isIterateeCall.js */function(global, require, module, exports) {var eq = require(333   ), // 333 = ./eq
-    isArrayLike = require(410            ), // 410 = ./isArrayLike
-    isIndex = require(400         ), // 400 = ./_isIndex
-    isObject = require(352         ); // 352 = ./isObject
+}, 559, null, "lodash/_shortOut.js");
+__d(/* lodash/_isIterateeCall.js */function(global, require, module, exports) {var eq = require(435   ), // 435 = ./eq
+    isArrayLike = require(512            ), // 512 = ./isArrayLike
+    isIndex = require(502         ), // 502 = ./_isIndex
+    isObject = require(454         ); // 454 = ./isObject
 
 function isIterateeCall(value, index, object) {
   if (!isObject(object)) {
@@ -28281,24 +28286,24 @@ function isIterateeCall(value, index, object) {
 }
 
 module.exports = isIterateeCall;
-}, 458, null, "lodash/_isIterateeCall.js");
-__d(/* lodash/difference.js */function(global, require, module, exports) {var baseDifference = require(460                ), // 460 = ./_baseDifference
-    baseFlatten = require(466             ), // 466 = ./_baseFlatten
-    baseRest = require(451          ), // 451 = ./_baseRest
-    isArrayLikeObject = require(468                  ); // 468 = ./isArrayLikeObject
+}, 560, null, "lodash/_isIterateeCall.js");
+__d(/* lodash/difference.js */function(global, require, module, exports) {var baseDifference = require(562                ), // 562 = ./_baseDifference
+    baseFlatten = require(568             ), // 568 = ./_baseFlatten
+    baseRest = require(553          ), // 553 = ./_baseRest
+    isArrayLikeObject = require(570                  ); // 570 = ./isArrayLikeObject
 
 var difference = baseRest(function (array, values) {
     return isArrayLikeObject(array) ? baseDifference(array, baseFlatten(values, 1, isArrayLikeObject, true)) : [];
 });
 
 module.exports = difference;
-}, 459, null, "lodash/difference.js");
-__d(/* lodash/_baseDifference.js */function(global, require, module, exports) {var SetCache = require(375          ), // 375 = ./_SetCache
-    arrayIncludes = require(461               ), // 461 = ./_arrayIncludes
-    arrayIncludesWith = require(465                   ), // 465 = ./_arrayIncludesWith
-    arrayMap = require(430          ), // 430 = ./_arrayMap
-    baseUnary = require(404           ), // 404 = ./_baseUnary
-    cacheHas = require(379          ); // 379 = ./_cacheHas
+}, 561, null, "lodash/difference.js");
+__d(/* lodash/_baseDifference.js */function(global, require, module, exports) {var SetCache = require(477          ), // 477 = ./_SetCache
+    arrayIncludes = require(563               ), // 563 = ./_arrayIncludes
+    arrayIncludesWith = require(567                   ), // 567 = ./_arrayIncludesWith
+    arrayMap = require(532          ), // 532 = ./_arrayMap
+    baseUnary = require(506           ), // 506 = ./_baseUnary
+    cacheHas = require(481          ); // 481 = ./_cacheHas
 
 var LARGE_ARRAY_SIZE = 200;
 
@@ -28345,8 +28350,8 @@ function baseDifference(array, values, iteratee, comparator) {
 }
 
 module.exports = baseDifference;
-}, 460, null, "lodash/_baseDifference.js");
-__d(/* lodash/_arrayIncludes.js */function(global, require, module, exports) {var baseIndexOf = require(462             ); // 462 = ./_baseIndexOf
+}, 562, null, "lodash/_baseDifference.js");
+__d(/* lodash/_arrayIncludes.js */function(global, require, module, exports) {var baseIndexOf = require(564             ); // 564 = ./_baseIndexOf
 
 function arrayIncludes(array, value) {
   var length = array == null ? 0 : array.length;
@@ -28354,24 +28359,24 @@ function arrayIncludes(array, value) {
 }
 
 module.exports = arrayIncludes;
-}, 461, null, "lodash/_arrayIncludes.js");
-__d(/* lodash/_baseIndexOf.js */function(global, require, module, exports) {var baseFindIndex = require(440               ), // 440 = ./_baseFindIndex
-    baseIsNaN = require(463           ), // 463 = ./_baseIsNaN
-    strictIndexOf = require(464               ); // 464 = ./_strictIndexOf
+}, 563, null, "lodash/_arrayIncludes.js");
+__d(/* lodash/_baseIndexOf.js */function(global, require, module, exports) {var baseFindIndex = require(542               ), // 542 = ./_baseFindIndex
+    baseIsNaN = require(565           ), // 565 = ./_baseIsNaN
+    strictIndexOf = require(566               ); // 566 = ./_strictIndexOf
 
 function baseIndexOf(array, value, fromIndex) {
     return value === value ? strictIndexOf(array, value, fromIndex) : baseFindIndex(array, baseIsNaN, fromIndex);
 }
 
 module.exports = baseIndexOf;
-}, 462, null, "lodash/_baseIndexOf.js");
+}, 564, null, "lodash/_baseIndexOf.js");
 __d(/* lodash/_baseIsNaN.js */function(global, require, module, exports) {
 function baseIsNaN(value) {
   return value !== value;
 }
 
 module.exports = baseIsNaN;
-}, 463, null, "lodash/_baseIsNaN.js");
+}, 565, null, "lodash/_baseIsNaN.js");
 __d(/* lodash/_strictIndexOf.js */function(global, require, module, exports) {
 function strictIndexOf(array, value, fromIndex) {
   var index = fromIndex - 1,
@@ -28386,7 +28391,7 @@ function strictIndexOf(array, value, fromIndex) {
 }
 
 module.exports = strictIndexOf;
-}, 464, null, "lodash/_strictIndexOf.js");
+}, 566, null, "lodash/_strictIndexOf.js");
 __d(/* lodash/_arrayIncludesWith.js */function(global, require, module, exports) {
 function arrayIncludesWith(array, value, comparator) {
   var index = -1,
@@ -28401,9 +28406,9 @@ function arrayIncludesWith(array, value, comparator) {
 }
 
 module.exports = arrayIncludesWith;
-}, 465, null, "lodash/_arrayIncludesWith.js");
-__d(/* lodash/_baseFlatten.js */function(global, require, module, exports) {var arrayPush = require(387           ), // 387 = ./_arrayPush
-    isFlattenable = require(467               ); // 467 = ./_isFlattenable
+}, 567, null, "lodash/_arrayIncludesWith.js");
+__d(/* lodash/_baseFlatten.js */function(global, require, module, exports) {var arrayPush = require(489           ), // 489 = ./_arrayPush
+    isFlattenable = require(569               ); // 569 = ./_isFlattenable
 
 function baseFlatten(array, depth, predicate, isStrict, result) {
   var index = -1,
@@ -28428,10 +28433,10 @@ function baseFlatten(array, depth, predicate, isStrict, result) {
 }
 
 module.exports = baseFlatten;
-}, 466, null, "lodash/_baseFlatten.js");
-__d(/* lodash/_isFlattenable.js */function(global, require, module, exports) {var Symbol = require(347        ), // 347 = ./_Symbol
-    isArguments = require(395            ), // 395 = ./isArguments
-    isArray = require(388        ); // 388 = ./isArray
+}, 568, null, "lodash/_baseFlatten.js");
+__d(/* lodash/_isFlattenable.js */function(global, require, module, exports) {var Symbol = require(449        ), // 449 = ./_Symbol
+    isArguments = require(497            ), // 497 = ./isArguments
+    isArray = require(490        ); // 490 = ./isArray
 
 var spreadableSymbol = Symbol ? typeof Symbol === 'function' ? Symbol.isConcatSpreadable : '@@isConcatSpreadable' : undefined;
 
@@ -28440,16 +28445,16 @@ function isFlattenable(value) {
 }
 
 module.exports = isFlattenable;
-}, 467, null, "lodash/_isFlattenable.js");
-__d(/* lodash/isArrayLikeObject.js */function(global, require, module, exports) {var isArrayLike = require(410            ), // 410 = ./isArrayLike
-    isObjectLike = require(397             ); // 397 = ./isObjectLike
+}, 569, null, "lodash/_isFlattenable.js");
+__d(/* lodash/isArrayLikeObject.js */function(global, require, module, exports) {var isArrayLike = require(512            ), // 512 = ./isArrayLike
+    isObjectLike = require(499             ); // 499 = ./isObjectLike
 
 function isArrayLikeObject(value) {
   return isObjectLike(value) && isArrayLike(value);
 }
 
 module.exports = isArrayLikeObject;
-}, 468, null, "lodash/isArrayLikeObject.js");
+}, 570, null, "lodash/isArrayLikeObject.js");
 __d(/* react-proxy/modules/bindAutoBindMethods.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28530,7 +28535,7 @@ function bindAutoBindMethodsFromArray(component) {
     component[autoBindKey] = bindAutoBindMethod(component, method);
   }
 }
-}, 469, null, "react-proxy/modules/bindAutoBindMethods.js");
+}, 571, null, "react-proxy/modules/bindAutoBindMethods.js");
 __d(/* react-proxy/modules/deleteUnknownAutoBindMethods.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28591,7 +28596,7 @@ function deleteUnknownAutoBindMethods(component) {
     }
   });
 }
-}, 470, null, "react-proxy/modules/deleteUnknownAutoBindMethods.js");
+}, 572, null, "react-proxy/modules/deleteUnknownAutoBindMethods.js");
 __d(/* react-deep-force-update/lib/index.js */function(global, require, module, exports) {
 'use strict';
 
@@ -28676,7 +28681,7 @@ function getForceUpdate(React) {
 }
 
 module.exports = exports['default'];
-}, 471, null, "react-deep-force-update/lib/index.js");
+}, 573, null, "react-deep-force-update/lib/index.js");
 __d(/* global/window.js */function(global, require, module, exports) {var win;
 
 if (typeof window !== "undefined") {
@@ -28690,7 +28695,7 @@ if (typeof window !== "undefined") {
 }
 
 module.exports = win;
-}, 472, null, "global/window.js");
+}, 574, null, "global/window.js");
 __d(/* StyleSheet */function(global, require, module, exports) {
 'use strict';
 
@@ -36213,7 +36218,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -37613,7 +37618,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -38693,7 +38698,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -38971,7 +38976,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -43460,7 +43465,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -44232,7 +44237,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -45198,7 +45203,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -45406,7 +45411,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index2 = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index2 = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index3 = _interopRequireDefault(_index2);
 
@@ -47034,7 +47039,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -47521,7 +47526,7 @@ __d(/* MaskedViewIOS */function(global, require, module, exports) {var _react2 =
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -47653,7 +47658,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -47849,7 +47854,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -48039,7 +48044,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -48363,7 +48368,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -48492,7 +48497,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -48628,7 +48633,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -48752,7 +48757,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -49037,7 +49042,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -49296,7 +49301,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -49558,7 +49563,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -49978,7 +49983,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -50946,7 +50951,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -51080,7 +51085,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -51769,7 +51774,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -52331,7 +52336,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -52401,7 +52406,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -52568,7 +52573,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -52912,7 +52917,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -53543,7 +53548,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                          ); // 319 = ./../../../react-transform-hmr/lib/index.js
+var _index = require(421                                          ); // 421 = ./../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -53771,7 +53776,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -54020,7 +54025,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -54776,7 +54781,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -54889,7 +54894,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -56038,7 +56043,7 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                             ); // 319 = ./../../../../react-transform-hmr/lib/index.js
+var _index = require(421                                             ); // 421 = ./../../../../react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -58136,6 +58141,7 @@ __d(/* albums/src/styles/colors.js */function(global, require, module, exports) 
 exports.default = {
   brand: {
     red: '#ED3620',
+    brightBlue: '#007AFF',
     blue: '#0283EA',
     turquoise: '#00A89A',
     orange: '#FF8F00',
@@ -58175,7 +58181,7 @@ exports.default = {
   }
 };
 }, 317, null, "albums/src/styles/colors.js");
-__d(/* albums/src/components/albums/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+__d(/* albums/src/components/albums/Albums.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -58183,23 +58189,23 @@ var _react2 = require(12     ); // 12 = react
 
 var _react3 = _interopRequireDefault(_react2);
 
-var _index = require(319                                                       ); // 319 = ./../../../node_modules/react-transform-hmr/lib/index.js
+var _index = require(421                                                       ); // 421 = ./../../../node_modules/react-transform-hmr/lib/index.js
 
 var _index2 = _interopRequireDefault(_index);
 
-var _jsxFileName = '/Users/oshalygin/dev/react-native/albums/src/components/albums/index.js';
+var _jsxFileName = '/Users/oshalygin/dev/react-native/albums/src/components/albums/Albums.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _reactNative = require(22            ); // 22 = react-native
 
-var _api = require(473                  ); // 473 = ../../utilities/api
+var _api = require(319                  ); // 319 = ../../utilities/api
 
 var _api2 = _interopRequireDefault(_api);
 
-var _albumDetail = require(500               ); // 500 = ./../albumDetail
+var _AlbumDetail = require(575                              ); // 575 = ./../albumDetail/AlbumDetail.js
 
-var _albumDetail2 = _interopRequireDefault(_albumDetail);
+var _AlbumDetail2 = _interopRequireDefault(_AlbumDetail);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -58216,7 +58222,7 @@ var _components = {
 };
 
 var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-  filename: '/Users/oshalygin/dev/react-native/albums/src/components/albums/index.js',
+  filename: '/Users/oshalygin/dev/react-native/albums/src/components/albums/Albums.js',
   components: _components,
   locals: [module],
   imports: [_react3.default]
@@ -58264,7 +58270,7 @@ var AlbumList = _wrapComponent('AlbumList')(function (_React$Component) {
       var albums = this.state.albums;
 
       return albums.map(function (album, index) {
-        return _react3.default.createElement(_albumDetail2.default, { key: index, album: album, __source: {
+        return _react3.default.createElement(_AlbumDetail2.default, { key: index, album: album, __source: {
             fileName: _jsxFileName,
             lineNumber: 23
           }
@@ -58275,7 +58281,7 @@ var AlbumList = _wrapComponent('AlbumList')(function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react3.default.createElement(
-        _reactNative.View,
+        _reactNative.ScrollView,
         {
           __source: {
             fileName: _jsxFileName,
@@ -58291,7 +58297,7 @@ var AlbumList = _wrapComponent('AlbumList')(function (_React$Component) {
 }(_react3.default.Component));
 
 exports.default = AlbumList;
-}, 318, null, "albums/src/components/albums/index.js");
+}, 576, null, "albums/src/components/albums/Albums.js");
 __d(/* albums/src/utilities/api.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -58306,7 +58312,7 @@ exports.post = post;
 exports.patch = patch;
 exports.deleteApi = deleteApi;
 
-var _axios = require(474    ); // 474 = axios
+var _axios = require(392    ); // 392 = axios
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -58351,15 +58357,15 @@ exports.default = {
   patch: patch,
   delete: deleteApi
 };
-}, 473, null, "albums/src/utilities/api.js");
-__d(/* axios/index.js */function(global, require, module, exports) {module.exports = require(475          ); // 475 = ./lib/axios
-}, 474, null, "axios/index.js");
+}, 319, null, "albums/src/utilities/api.js");
+__d(/* axios/index.js */function(global, require, module, exports) {module.exports = require(393          ); // 393 = ./lib/axios
+}, 392, null, "axios/index.js");
 __d(/* axios/lib/axios.js */function(global, require, module, exports) {'use strict';
 
-var utils = require(476      ); // 476 = ./utils
-var bind = require(477             ); // 477 = ./helpers/bind
-var Axios = require(479           ); // 479 = ./core/Axios
-var defaults = require(480         ); // 480 = ./defaults
+var utils = require(394      ); // 394 = ./utils
+var bind = require(395             ); // 395 = ./helpers/bind
+var Axios = require(397           ); // 397 = ./core/Axios
+var defaults = require(398         ); // 398 = ./defaults
 
 function createInstance(defaultConfig) {
   var context = new Axios(defaultConfig);
@@ -58380,23 +58386,23 @@ axios.create = function create(instanceConfig) {
   return createInstance(utils.merge(defaults, instanceConfig));
 };
 
-axios.Cancel = require(497              ); // 497 = ./cancel/Cancel
-axios.CancelToken = require(498                   ); // 498 = ./cancel/CancelToken
-axios.isCancel = require(494                ); // 494 = ./cancel/isCancel
+axios.Cancel = require(415              ); // 415 = ./cancel/Cancel
+axios.CancelToken = require(416                   ); // 416 = ./cancel/CancelToken
+axios.isCancel = require(412                ); // 412 = ./cancel/isCancel
 
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = require(499               ); // 499 = ./helpers/spread
+axios.spread = require(417               ); // 417 = ./helpers/spread
 
 module.exports = axios;
 
 module.exports.default = axios;
-}, 475, null, "axios/lib/axios.js");
+}, 393, null, "axios/lib/axios.js");
 __d(/* axios/lib/utils.js */function(global, require, module, exports) {'use strict';
 
-var bind = require(477             ); // 477 = ./helpers/bind
-var isBuffer = require(478        ); // 478 = is-buffer
+var bind = require(395             ); // 395 = ./helpers/bind
+var isBuffer = require(396        ); // 396 = is-buffer
 
 var toString = Object.prototype.toString;
 
@@ -58544,7 +58550,7 @@ module.exports = {
   extend: extend,
   trim: trim
 };
-}, 476, null, "axios/lib/utils.js");
+}, 394, null, "axios/lib/utils.js");
 __d(/* axios/lib/helpers/bind.js */function(global, require, module, exports) {'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -58556,7 +58562,7 @@ module.exports = function bind(fn, thisArg) {
     return fn.apply(thisArg, args);
   };
 };
-}, 477, null, "axios/lib/helpers/bind.js");
+}, 395, null, "axios/lib/helpers/bind.js");
 __d(/* is-buffer/index.js */function(global, require, module, exports) {/*!
  * Determine if an object is a Buffer
  *
@@ -58575,15 +58581,15 @@ function isBuffer(obj) {
 function isSlowBuffer(obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0));
 }
-}, 478, null, "is-buffer/index.js");
+}, 396, null, "is-buffer/index.js");
 __d(/* axios/lib/core/Axios.js */function(global, require, module, exports) {'use strict';
 
-var defaults = require(480            ); // 480 = ./../defaults
-var utils = require(476         ); // 476 = ./../utils
-var InterceptorManager = require(491                   ); // 491 = ./InterceptorManager
-var dispatchRequest = require(492                ); // 492 = ./dispatchRequest
-var isAbsoluteURL = require(495                         ); // 495 = ./../helpers/isAbsoluteURL
-var combineURLs = require(496                       ); // 496 = ./../helpers/combineURLs
+var defaults = require(398            ); // 398 = ./../defaults
+var utils = require(394         ); // 394 = ./../utils
+var InterceptorManager = require(409                   ); // 409 = ./InterceptorManager
+var dispatchRequest = require(410                ); // 410 = ./dispatchRequest
+var isAbsoluteURL = require(413                         ); // 413 = ./../helpers/isAbsoluteURL
+var combineURLs = require(414                       ); // 414 = ./../helpers/combineURLs
 
 function Axios(instanceConfig) {
   this.defaults = instanceConfig;
@@ -58645,11 +58651,11 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 });
 
 module.exports = Axios;
-}, 479, null, "axios/lib/core/Axios.js");
+}, 397, null, "axios/lib/core/Axios.js");
 __d(/* axios/lib/defaults.js */function(global, require, module, exports) {'use strict';
 
-var utils = require(476      ); // 476 = ./utils
-var normalizeHeaderName = require(481                            ); // 481 = ./helpers/normalizeHeaderName
+var utils = require(394      ); // 394 = ./utils
+var normalizeHeaderName = require(399                            ); // 399 = ./helpers/normalizeHeaderName
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -58664,9 +58670,9 @@ function setContentTypeIfUnset(headers, value) {
 function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
-    adapter = require(482             ); // 482 = ./adapters/xhr
+    adapter = require(400             ); // 400 = ./adapters/xhr
   } else if (typeof process !== 'undefined') {
-    adapter = require(482              ); // 482 = ./adapters/http
+    adapter = require(400              ); // 400 = ./adapters/http
   }
   return adapter;
 }
@@ -58729,10 +58735,10 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 });
 
 module.exports = defaults;
-}, 480, null, "axios/lib/defaults.js");
+}, 398, null, "axios/lib/defaults.js");
 __d(/* axios/lib/helpers/normalizeHeaderName.js */function(global, require, module, exports) {'use strict';
 
-var utils = require(476       ); // 476 = ../utils
+var utils = require(394       ); // 394 = ../utils
 
 module.exports = function normalizeHeaderName(headers, normalizedName) {
   utils.forEach(headers, function processHeader(value, name) {
@@ -58742,16 +58748,16 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
     }
   });
 };
-}, 481, null, "axios/lib/helpers/normalizeHeaderName.js");
+}, 399, null, "axios/lib/helpers/normalizeHeaderName.js");
 __d(/* axios/lib/adapters/xhr.js */function(global, require, module, exports) {'use strict';
 
-var utils = require(476         ); // 476 = ./../utils
-var settle = require(483               ); // 483 = ./../core/settle
-var buildURL = require(486                    ); // 486 = ./../helpers/buildURL
-var parseHeaders = require(487                        ); // 487 = ./../helpers/parseHeaders
-var isURLSameOrigin = require(488                           ); // 488 = ./../helpers/isURLSameOrigin
-var createError = require(484                  ); // 484 = ../core/createError
-var btoa = typeof window !== 'undefined' && window.btoa && window.btoa.bind(window) || require(489                ); // 489 = ./../helpers/btoa
+var utils = require(394         ); // 394 = ./../utils
+var settle = require(401               ); // 401 = ./../core/settle
+var buildURL = require(404                    ); // 404 = ./../helpers/buildURL
+var parseHeaders = require(405                        ); // 405 = ./../helpers/parseHeaders
+var isURLSameOrigin = require(406                           ); // 406 = ./../helpers/isURLSameOrigin
+var createError = require(402                  ); // 402 = ../core/createError
+var btoa = typeof window !== 'undefined' && window.btoa && window.btoa.bind(window) || require(407                ); // 407 = ./../helpers/btoa
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -58823,7 +58829,7 @@ module.exports = function xhrAdapter(config) {
     };
 
     if (utils.isStandardBrowserEnv()) {
-      var cookies = require(490                   ); // 490 = ./../helpers/cookies
+      var cookies = require(408                   ); // 408 = ./../helpers/cookies
 
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ? cookies.read(config.xsrfCookieName) : undefined;
 
@@ -58884,10 +58890,10 @@ module.exports = function xhrAdapter(config) {
     request.send(requestData);
   });
 };
-}, 482, null, "axios/lib/adapters/xhr.js");
+}, 400, null, "axios/lib/adapters/xhr.js");
 __d(/* axios/lib/core/settle.js */function(global, require, module, exports) {'use strict';
 
-var createError = require(484            ); // 484 = ./createError
+var createError = require(402            ); // 402 = ./createError
 
 module.exports = function settle(resolve, reject, response) {
   var validateStatus = response.config.validateStatus;
@@ -58898,16 +58904,16 @@ module.exports = function settle(resolve, reject, response) {
     reject(createError('Request failed with status code ' + response.status, response.config, null, response.request, response));
   }
 };
-}, 483, null, "axios/lib/core/settle.js");
+}, 401, null, "axios/lib/core/settle.js");
 __d(/* axios/lib/core/createError.js */function(global, require, module, exports) {'use strict';
 
-var enhanceError = require(485             ); // 485 = ./enhanceError
+var enhanceError = require(403             ); // 403 = ./enhanceError
 
 module.exports = function createError(message, config, code, request, response) {
   var error = new Error(message);
   return enhanceError(error, config, code, request, response);
 };
-}, 484, null, "axios/lib/core/createError.js");
+}, 402, null, "axios/lib/core/createError.js");
 __d(/* axios/lib/core/enhanceError.js */function(global, require, module, exports) {'use strict';
 
 module.exports = function enhanceError(error, config, code, request, response) {
@@ -58919,10 +58925,10 @@ module.exports = function enhanceError(error, config, code, request, response) {
   error.response = response;
   return error;
 };
-}, 485, null, "axios/lib/core/enhanceError.js");
+}, 403, null, "axios/lib/core/enhanceError.js");
 __d(/* axios/lib/helpers/buildURL.js */function(global, require, module, exports) {'use strict';
 
-var utils = require(476         ); // 476 = ./../utils
+var utils = require(394         ); // 394 = ./../utils
 
 function encode(val) {
   return encodeURIComponent(val).replace(/%40/gi, '@').replace(/%3A/gi, ':').replace(/%24/g, '$').replace(/%2C/gi, ',').replace(/%20/g, '+').replace(/%5B/gi, '[').replace(/%5D/gi, ']');
@@ -58973,10 +58979,10 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
   return url;
 };
-}, 486, null, "axios/lib/helpers/buildURL.js");
+}, 404, null, "axios/lib/helpers/buildURL.js");
 __d(/* axios/lib/helpers/parseHeaders.js */function(global, require, module, exports) {'use strict';
 
-var utils = require(476         ); // 476 = ./../utils
+var utils = require(394         ); // 394 = ./../utils
 
 module.exports = function parseHeaders(headers) {
   var parsed = {};
@@ -59000,10 +59006,10 @@ module.exports = function parseHeaders(headers) {
 
   return parsed;
 };
-}, 487, null, "axios/lib/helpers/parseHeaders.js");
+}, 405, null, "axios/lib/helpers/parseHeaders.js");
 __d(/* axios/lib/helpers/isURLSameOrigin.js */function(global, require, module, exports) {'use strict';
 
-var utils = require(476         ); // 476 = ./../utils
+var utils = require(394         ); // 394 = ./../utils
 
 module.exports = utils.isStandardBrowserEnv() ? function standardBrowserEnv() {
   var msie = /(msie|trident)/i.test(navigator.userAgent);
@@ -59043,7 +59049,7 @@ module.exports = utils.isStandardBrowserEnv() ? function standardBrowserEnv() {
     return true;
   };
 }();
-}, 488, null, "axios/lib/helpers/isURLSameOrigin.js");
+}, 406, null, "axios/lib/helpers/isURLSameOrigin.js");
 __d(/* axios/lib/helpers/btoa.js */function(global, require, module, exports) {'use strict';
 
 var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
@@ -59069,10 +59075,10 @@ function btoa(input) {
 }
 
 module.exports = btoa;
-}, 489, null, "axios/lib/helpers/btoa.js");
+}, 407, null, "axios/lib/helpers/btoa.js");
 __d(/* axios/lib/helpers/cookies.js */function(global, require, module, exports) {'use strict';
 
-var utils = require(476         ); // 476 = ./../utils
+var utils = require(394         ); // 394 = ./../utils
 
 module.exports = utils.isStandardBrowserEnv() ? function standardBrowserEnv() {
   return {
@@ -59117,10 +59123,10 @@ module.exports = utils.isStandardBrowserEnv() ? function standardBrowserEnv() {
     remove: function remove() {}
   };
 }();
-}, 490, null, "axios/lib/helpers/cookies.js");
+}, 408, null, "axios/lib/helpers/cookies.js");
 __d(/* axios/lib/core/InterceptorManager.js */function(global, require, module, exports) {'use strict';
 
-var utils = require(476         ); // 476 = ./../utils
+var utils = require(394         ); // 394 = ./../utils
 
 function InterceptorManager() {
   this.handlers = [];
@@ -59149,13 +59155,13 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 };
 
 module.exports = InterceptorManager;
-}, 491, null, "axios/lib/core/InterceptorManager.js");
+}, 409, null, "axios/lib/core/InterceptorManager.js");
 __d(/* axios/lib/core/dispatchRequest.js */function(global, require, module, exports) {'use strict';
 
-var utils = require(476         ); // 476 = ./../utils
-var transformData = require(493              ); // 493 = ./transformData
-var isCancel = require(494                 ); // 494 = ../cancel/isCancel
-var defaults = require(480          ); // 480 = ../defaults
+var utils = require(394         ); // 394 = ./../utils
+var transformData = require(411              ); // 411 = ./transformData
+var isCancel = require(412                 ); // 412 = ../cancel/isCancel
+var defaults = require(398          ); // 398 = ../defaults
 
 function throwIfCancellationRequested(config) {
   if (config.cancelToken) {
@@ -59196,10 +59202,10 @@ module.exports = function dispatchRequest(config) {
     return Promise.reject(reason);
   });
 };
-}, 492, null, "axios/lib/core/dispatchRequest.js");
+}, 410, null, "axios/lib/core/dispatchRequest.js");
 __d(/* axios/lib/core/transformData.js */function(global, require, module, exports) {'use strict';
 
-var utils = require(476         ); // 476 = ./../utils
+var utils = require(394         ); // 394 = ./../utils
 
 module.exports = function transformData(data, headers, fns) {
   utils.forEach(fns, function transform(fn) {
@@ -59208,26 +59214,26 @@ module.exports = function transformData(data, headers, fns) {
 
   return data;
 };
-}, 493, null, "axios/lib/core/transformData.js");
+}, 411, null, "axios/lib/core/transformData.js");
 __d(/* axios/lib/cancel/isCancel.js */function(global, require, module, exports) {'use strict';
 
 module.exports = function isCancel(value) {
   return !!(value && value.__CANCEL__);
 };
-}, 494, null, "axios/lib/cancel/isCancel.js");
+}, 412, null, "axios/lib/cancel/isCancel.js");
 __d(/* axios/lib/helpers/isAbsoluteURL.js */function(global, require, module, exports) {'use strict';
 
 module.exports = function isAbsoluteURL(url) {
   return (/^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url)
   );
 };
-}, 495, null, "axios/lib/helpers/isAbsoluteURL.js");
+}, 413, null, "axios/lib/helpers/isAbsoluteURL.js");
 __d(/* axios/lib/helpers/combineURLs.js */function(global, require, module, exports) {'use strict';
 
 module.exports = function combineURLs(baseURL, relativeURL) {
   return relativeURL ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '') : baseURL;
 };
-}, 496, null, "axios/lib/helpers/combineURLs.js");
+}, 414, null, "axios/lib/helpers/combineURLs.js");
 __d(/* axios/lib/cancel/Cancel.js */function(global, require, module, exports) {'use strict';
 
 function Cancel(message) {
@@ -59241,10 +59247,10 @@ Cancel.prototype.toString = function toString() {
 Cancel.prototype.__CANCEL__ = true;
 
 module.exports = Cancel;
-}, 497, null, "axios/lib/cancel/Cancel.js");
+}, 415, null, "axios/lib/cancel/Cancel.js");
 __d(/* axios/lib/cancel/CancelToken.js */function(global, require, module, exports) {'use strict';
 
-var Cancel = require(497       ); // 497 = ./Cancel
+var Cancel = require(415       ); // 415 = ./Cancel
 
 function CancelToken(executor) {
   if (typeof executor !== 'function') {
@@ -59285,7 +59291,7 @@ CancelToken.source = function source() {
 };
 
 module.exports = CancelToken;
-}, 498, null, "axios/lib/cancel/CancelToken.js");
+}, 416, null, "axios/lib/cancel/CancelToken.js");
 __d(/* axios/lib/helpers/spread.js */function(global, require, module, exports) {'use strict';
 
 module.exports = function spread(callback) {
@@ -59293,11 +59299,11 @@ module.exports = function spread(callback) {
     return callback.apply(null, arr);
   };
 };
-}, 499, null, "axios/lib/helpers/spread.js");
-__d(/* albums/src/components/albumDetail/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+}, 417, null, "axios/lib/helpers/spread.js");
+__d(/* albums/src/components/albumDetail/AlbumDetail.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/oshalygin/dev/react-native/albums/src/components/albumDetail/index.js';
+var _jsxFileName = '/Users/oshalygin/dev/react-native/albums/src/components/albumDetail/AlbumDetail.js';
 
 var _react = require(12     ); // 12 = react
 
@@ -59309,13 +59315,17 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _reactNative = require(22            ); // 22 = react-native
 
-var _Card = require(501             ); // 501 = ../common/Card
+var _Card = require(419             ); // 419 = ../common/Card
 
 var _Card2 = _interopRequireDefault(_Card);
 
-var _CardSection = require(502                    ); // 502 = ../common/CardSection
+var _CardSection = require(420                    ); // 420 = ../common/CardSection
 
 var _CardSection2 = _interopRequireDefault(_CardSection);
+
+var _Button = require(577                  ); // 577 = ../common/Button.js
+
+var _Button2 = _interopRequireDefault(_Button);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -59328,15 +59338,50 @@ var propTypes = {
     thumbnail_image: _propTypes2.default.string.isRequired })
 };
 
+var styles = {
+  headerContentStyle: {
+    flexDirection: 'column',
+    justifyContent: 'space-around'
+  },
+  headerTextStyle: {
+    fontSize: 18
+  },
+  thumbnailStyle: {
+    height: 50,
+    width: 50
+  },
+  thumbnailContainerStyle: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 10,
+    marginRight: 10
+  },
+  imageStyle: {
+    height: 300,
+    flex: 1,
+    width: null
+  }
+};
+
+var openAlbum = function openAlbum(url) {
+  return _reactNative.Linking.openURL(url);
+};
+
 var AlbumDetail = function AlbumDetail(_ref) {
   var album = _ref.album;
+  var title = album.title,
+      artist = album.artist,
+      thumbnail = album.thumbnail_image,
+      image = album.image,
+      url = album.url;
+
 
   return _react2.default.createElement(
     _Card2.default,
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 51
       }
     },
     _react2.default.createElement(
@@ -59344,18 +59389,48 @@ var AlbumDetail = function AlbumDetail(_ref) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 52
         }
       },
       _react2.default.createElement(
-        _reactNative.Text,
-        {
-          __source: {
+        _reactNative.View,
+        { style: styles.thumbnailContainerStyle, __source: {
             fileName: _jsxFileName,
-            lineNumber: 21
+            lineNumber: 53
           }
         },
-        album.title
+        _react2.default.createElement(_reactNative.Image, { style: styles.thumbnailStyle, source: { uri: thumbnail }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54
+          }
+        })
+      ),
+      _react2.default.createElement(
+        _reactNative.View,
+        { style: styles.headerContentStyle, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56
+          }
+        },
+        _react2.default.createElement(
+          _reactNative.Text,
+          { style: styles.headerTextStyle, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 57
+            }
+          },
+          title
+        ),
+        _react2.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 58
+            }
+          },
+          artist
+        )
       )
     ),
     _react2.default.createElement(
@@ -59363,19 +59438,30 @@ var AlbumDetail = function AlbumDetail(_ref) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 61
         }
       },
-      _react2.default.createElement(
-        _reactNative.Text,
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 25
-          }
-        },
-        album.title
-      )
+      _react2.default.createElement(_reactNative.Image, { style: styles.imageStyle, source: { uri: image }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        }
+      })
+    ),
+    _react2.default.createElement(
+      _CardSection2.default,
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        }
+      },
+      _react2.default.createElement(_Button2.default, { text: 'Buy Now', onPress: function onPress() {
+          return openAlbum(url);
+        }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        }
+      })
     )
   );
 };
@@ -59383,7 +59469,7 @@ var AlbumDetail = function AlbumDetail(_ref) {
 AlbumDetail.propTypes = propTypes;
 
 exports.default = AlbumDetail;
-}, 500, null, "albums/src/components/albumDetail/index.js");
+}, 575, null, "albums/src/components/albumDetail/AlbumDetail.js");
 __d(/* albums/src/components/common/Card.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59443,7 +59529,7 @@ var Card = function Card(_ref) {
 Card.propTypes = propTypes;
 
 exports.default = Card;
-}, 501, null, "albums/src/components/common/Card.js");
+}, 419, null, "albums/src/components/common/Card.js");
 __d(/* albums/src/components/common/CardSection.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59498,7 +59584,81 @@ var CardSection = function CardSection(_ref) {
 CardSection.propTypes = propTypes;
 
 exports.default = CardSection;
-}, 502, null, "albums/src/components/common/CardSection.js");
+}, 420, null, "albums/src/components/common/CardSection.js");
+__d(/* albums/src/components/common/Button.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/oshalygin/dev/react-native/albums/src/components/common/Button.js';
+
+var _react = require(12     ); // 12 = react
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require(127         ); // 127 = prop-types
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactNative = require(22            ); // 22 = react-native
+
+var _colors = require(317                     ); // 317 = ../../styles/colors.js
+
+var _colors2 = _interopRequireDefault(_colors);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var propTypes = {
+  onPress: _propTypes2.default.func.isRequired,
+  text: _propTypes2.default.string.isRequired
+};
+
+var styles = {
+  buttonStyle: {
+    flex: 1,
+    alignSelf: 'stretch',
+    backgroundColor: _colors2.default.neutral.white,
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: _colors2.default.brand.brightBlue,
+    marginLeft: 5,
+    marginRight: 5
+  },
+  textStyle: {
+    alignSelf: 'center',
+    color: _colors2.default.brand.brightBlue,
+    fontSize: 16,
+    fontWeight: '600',
+    paddingTop: 10,
+    paddingBottom: 10
+  }
+};
+
+var Button = function Button(_ref) {
+  var onPress = _ref.onPress,
+      text = _ref.text;
+
+  return _react2.default.createElement(
+    _reactNative.TouchableOpacity,
+    { style: styles.buttonStyle, onPress: onPress, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      }
+    },
+    _react2.default.createElement(
+      _reactNative.Text,
+      { style: styles.textStyle, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        }
+      },
+      text
+    )
+  );
+};
+
+Button.propTypes = propTypes;
+
+exports.default = Button;
+}, 577, null, "albums/src/components/common/Button.js");
 ;require(68);
 ;require(0);
 //# sourceMappingURL=index.ios.map

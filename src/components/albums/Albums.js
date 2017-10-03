@@ -1,8 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import api from '../../utilities/api';
-import AlbumDetail from './../albumDetail';
+import AlbumDetail from './../albumDetail/AlbumDetail.js';
 
 class AlbumList extends React.Component {
   state = {
@@ -25,7 +25,7 @@ class AlbumList extends React.Component {
   }
 
   render() {
-    return <View>{this.renderAlbums()}</View>;
+    return <ScrollView>{this.renderAlbums()}</ScrollView>;
   }
 }
 

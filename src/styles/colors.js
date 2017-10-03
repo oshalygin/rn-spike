@@ -1,6 +1,7 @@
 export default {
   brand: {
     red: '#ED3620',
+    brightBlue: '#007AFF',
     blue: '#0283EA',
     turquoise: '#00A89A',
     orange: '#FF8F00',
