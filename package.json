@@ -7,8 +7,9 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"axios": "^0.16.2",
-		"prop-types": "^15.6.0",
+		"axios": "0.16.2",
+		"firebase": "4.5.0",
+		"prop-types": "15.6.0",
 		"react": "16.0.0",
 		"react-native": "0.48.4"
 	},
