@@ -56,3 +56,6 @@ fastlane/screenshots
 # RN packages
 ios/
 android/
+
+# VSCode files
+.vscode/.react/
