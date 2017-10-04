@@ -1,9 +1,12 @@
+import firebase from 'firebase';
+
 import React from 'react';
 import { View } from 'react-native';
 
 import Header from './common/Header';
 import AlbumList from './albums/Albums.js';
-import LoginForm from './login/LoginForm';
+import Login from './login/Login';
+import { firebaseCredentials } from '../../utilities/firebase-credentials';
 
 const styles = {
   root: {
@@ -16,11 +19,19 @@ class Application extends React.Component {
     loggedIn: false,
   };
 
+  componentWillMount() {
+    firebase.initializeApp(firebaseCredentials);
+  }
+
+  onLoginSubmitSuccess = () => {
+    this.setState({ loggedIn: true });
+  };
+
   render() {
     const { loggedIn } = this.state;
 
     if (!loggedIn) {
-      return <LoginForm />;
+      return <Login onSubmit={this.onLoginSubmitSuccess} />;
     }
 
     return (
