@@ -67,8 +67,12 @@ class Login extends React.Component {
                     this.setState({ message: 'Invalid Username or Password!' }),
                   );
               });
+          } else {
+            this.setState({
+              message: 'Invalid Username or Password!',
+              loading: false,
+            });
           }
-          this.setState({ message: 'Invalid Username or Password!' });
         });
     }
   };
