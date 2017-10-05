@@ -58119,6 +58119,11 @@ var Application = _wrapComponent('Application')(function (_React$Component) {
       loading: true
     }, _this.onLoginSubmitSuccess = function () {
       _this.setState({ loggedIn: true, loading: false });
+    }, _this.logout = function () {
+      _this.setState({ loading: true });
+      _firebase2.default.auth().signOut().then(function () {
+        _this.setState({ loggedIn: false, loading: false });
+      });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -58132,6 +58137,8 @@ var Application = _wrapComponent('Application')(function (_React$Component) {
       _firebase2.default.auth().onAuthStateChanged(function (user) {
         if (user) {
           _this2.setState({ loggedIn: true, loading: false });
+        } else {
+          _this2.setState({ loading: false });
         }
       });
     }
@@ -58147,7 +58154,7 @@ var Application = _wrapComponent('Application')(function (_React$Component) {
         return _react3.default.createElement(_Spinner2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42
+            lineNumber: 54
           }
         });
       }
@@ -58155,7 +58162,7 @@ var Application = _wrapComponent('Application')(function (_React$Component) {
       if (!loggedIn) {
         return _react3.default.createElement(_Login2.default, { onSubmit: this.onLoginSubmitSuccess, __source: {
             fileName: _jsxFileName,
-            lineNumber: 46
+            lineNumber: 58
           }
         });
       }
@@ -58164,18 +58171,18 @@ var Application = _wrapComponent('Application')(function (_React$Component) {
         _reactNative.View,
         { style: styles.root, __source: {
             fileName: _jsxFileName,
-            lineNumber: 50
+            lineNumber: 62
           }
         },
-        _react3.default.createElement(_Header2.default, { text: 'Albums', __source: {
+        _react3.default.createElement(_Header2.default, { text: 'Albums', rightIconOnPress: this.logout, __source: {
             fileName: _jsxFileName,
-            lineNumber: 51
+            lineNumber: 63
           }
         }),
         _react3.default.createElement(_Albums2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 52
+            lineNumber: 64
           }
         })
       );
@@ -79131,18 +79138,31 @@ var _colors2 = _interopRequireDefault(_colors);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var propTypes = {
-  text: _propTypes2.default.string.isRequired
+  text: _propTypes2.default.string.isRequired,
+  rightIconOnPress: _propTypes2.default.func
 };
 
 var styles = {
   textStyle: {
     fontSize: 20
   },
+  rightIcon: {
+    position: 'absolute',
+    right: 10,
+    paddingTop: 15,
+    justifyContent: 'center'
+  },
+  rightIconText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: _colors2.default.brand.brightBlue
+  },
   viewStyle: {
     height: 60,
     paddingTop: 15,
     display: 'flex',
     position: 'relative',
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: _colors2.default.neutral.fog,
@@ -79154,24 +79174,49 @@ var styles = {
 };
 
 var Header = function Header(_ref) {
-  var text = _ref.text;
+  var text = _ref.text,
+      rightIconOnPress = _ref.rightIconOnPress;
 
+  var rightIconExists = !!rightIconOnPress;
+  var icon = rightIconExists ? _react2.default.createElement(
+    _reactNative.TouchableOpacity,
+    { style: styles.rightIcon, onPress: rightIconOnPress, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      }
+    },
+    _react2.default.createElement(
+      _reactNative.Text,
+      { style: styles.rightIconText, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        }
+      },
+      'LogOut'
+    )
+  ) : _react2.default.createElement(_reactNative.Text, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    }
+  });
   return _react2.default.createElement(
     _reactNative.View,
     { style: styles.viewStyle, __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 53
       }
     },
     _react2.default.createElement(
       _reactNative.Text,
       { style: styles.textStyle, __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 54
         }
       },
       text
-    )
+    ),
+    icon
   );
 };
 

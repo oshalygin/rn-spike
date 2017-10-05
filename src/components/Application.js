@@ -27,12 +27,24 @@ class Application extends React.Component {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.setState({ loggedIn: true, loading: false });
+      } else {
+        this.setState({ loading: false });
       }
     });
   }
 
   onLoginSubmitSuccess = () => {
     this.setState({ loggedIn: true, loading: false });
+  };
+
+  logout = () => {
+    this.setState({ loading: true });
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        this.setState({ loggedIn: false, loading: false });
+      });
   };
 
   render() {
@@ -48,7 +60,7 @@ class Application extends React.Component {
 
     return (
       <View style={styles.root}>
-        <Header text="Albums" />
+        <Header text="Albums" rightIconOnPress={this.logout} />
         <AlbumList />
       </View>
     );
