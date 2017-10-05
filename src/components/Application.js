@@ -7,6 +7,7 @@ import Header from './common/Header';
 import AlbumList from './albums/Albums.js';
 import Login from './login/Login';
 import { firebaseCredentials } from '../../utilities/firebase-credentials';
+import Spinner from './common/Spinner';
 
 const styles = {
   root: {
@@ -17,18 +18,29 @@ const styles = {
 class Application extends React.Component {
   state = {
     loggedIn: false,
+    loading: true,
   };
 
   componentWillMount() {
     firebase.initializeApp(firebaseCredentials);
+
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({ loggedIn: true, loading: false });
+      }
+    });
   }
 
   onLoginSubmitSuccess = () => {
-    this.setState({ loggedIn: true });
+    this.setState({ loggedIn: true, loading: false });
   };
 
   render() {
-    const { loggedIn } = this.state;
+    const { loggedIn, loading } = this.state;
+
+    if (loading) {
+      return <Spinner />;
+    }
 
     if (!loggedIn) {
       return <Login onSubmit={this.onLoginSubmitSuccess} />;

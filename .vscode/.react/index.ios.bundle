@@ -58063,6 +58063,10 @@ var _Login2 = _interopRequireDefault(_Login);
 
 var _firebaseCredentials = require(492                                   ); // 492 = ../../utilities/firebase-credentials
 
+var _Spinner = require(491               ); // 491 = ./common/Spinner
+
+var _Spinner2 = _interopRequireDefault(_Spinner);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -58111,27 +58115,47 @@ var Application = _wrapComponent('Application')(function (_React$Component) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Application.__proto__ || Object.getPrototypeOf(Application)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      loggedIn: false
+      loggedIn: false,
+      loading: true
     }, _this.onLoginSubmitSuccess = function () {
-      _this.setState({ loggedIn: true });
+      _this.setState({ loggedIn: true, loading: false });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Application, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
+      var _this2 = this;
+
       _firebase2.default.initializeApp(_firebaseCredentials.firebaseCredentials);
+
+      _firebase2.default.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          _this2.setState({ loggedIn: true, loading: false });
+        }
+      });
     }
   }, {
     key: 'render',
     value: function render() {
-      var loggedIn = this.state.loggedIn;
+      var _state = this.state,
+          loggedIn = _state.loggedIn,
+          loading = _state.loading;
 
+
+      if (loading) {
+        return _react3.default.createElement(_Spinner2.default, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          }
+        });
+      }
 
       if (!loggedIn) {
         return _react3.default.createElement(_Login2.default, { onSubmit: this.onLoginSubmitSuccess, __source: {
             fileName: _jsxFileName,
-            lineNumber: 34
+            lineNumber: 46
           }
         });
       }
@@ -58140,18 +58164,18 @@ var Application = _wrapComponent('Application')(function (_React$Component) {
         _reactNative.View,
         { style: styles.root, __source: {
             fileName: _jsxFileName,
-            lineNumber: 38
+            lineNumber: 50
           }
         },
         _react3.default.createElement(_Header2.default, { text: 'Albums', __source: {
             fileName: _jsxFileName,
-            lineNumber: 39
+            lineNumber: 51
           }
         }),
         _react3.default.createElement(_Albums2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 40
+            lineNumber: 52
           }
         })
       );
