@@ -1,13 +1,13 @@
 import firebase from 'firebase';
-
 import React from 'react';
 import { View } from 'react-native';
 
 import Header from './common/Header';
 import AlbumList from './albums/Albums.js';
 import Login from './login/Login';
-import { firebaseCredentials } from '../../utilities/firebase-credentials';
 import Spinner from './common/Spinner';
+
+import { firebaseCredentials } from '../../utilities/firebase-credentials';
 
 const styles = {
   root: {
